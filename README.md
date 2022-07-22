@@ -1,0 +1,1 @@
+# manager_and_board_characteristics_code
