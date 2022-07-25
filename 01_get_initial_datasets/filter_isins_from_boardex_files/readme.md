@@ -1,0 +1,4 @@
+- Filter out rows in Boardex whose company ID is in a provided list of company IDs using `pythonarraytest_files.py`, `pythonarraytest_starter.sh`, and `pythonarraytest_files.sh`. The inputs are `companyids_to_search_for.xlsx` and a directory containing Boardex files. The outputs are filtered Boardex files in an separate folder.  
+  - This is a 2-layer script with parallel processing.
+  - Layer 1 is `pythonarraytest_starter.sh`, which runs commands to execute the layer-2 script `pythonarraytest_files.sh` with different arguments.
+  - This makes use of 8 CPUs at a time.
