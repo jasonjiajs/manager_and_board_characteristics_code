@@ -1,2 +1,2 @@
 # manager_and_board_characteristics_code
-Code to process Boardex and Execucomp Files
+Process Boardex and Execucomp files to get a relevant manager-level and firm-level dataset.
