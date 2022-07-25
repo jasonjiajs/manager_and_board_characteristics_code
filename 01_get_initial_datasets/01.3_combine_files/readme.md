@@ -1,0 +1,5 @@
+- Combine df files using `combine_files.ipynb`. The input is a directory `output_filtered_by_columns` containing Boardex files filtered by rows and columns in Mercury, where files may come in multiple fragments. The outputs are: 
+  - a directory `output_from_mercury_combined` where root file fragments are combined, 
+  - a directory `output_from_mercury_combined_fragment_and_country` where root file and region fragments are combined, and
+  - a directory `output_from_mercury_combined_fragment_country_and_managementtype` where root file, region and director fragments are combined.
+- The files in `output_from_mercury_combined_fragment_country_and_managementtype` are used to construct the firm and manager-level datasets.
