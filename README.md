@@ -36,7 +36,7 @@ Process Boardex files to get a relevant manager-level and firm-level dataset.
                  'Total Wealth - Total Wealth']
 - Categorical variables are aggregated by taking shares of counts across directors for each (Year x Company ID) pair. For example, the % of male and female directors in a particular (year, company).
   - Variables: [Director Experience - Gender,	Director Experience - Nationality Mix]
-- Firm identifiers are added on
+- Firm identifiers are added on by merging on Company ID.
   - Variables: ['CIK Code', 'HOAddress2', 'HOAddress1', 'HOAddress4',
                'Auditors', 'Latest AR', 'HO TelNumber', 'Bankers', 'Index', 'Ticker',
                'Market Cap', 'HO FaxNumber',
