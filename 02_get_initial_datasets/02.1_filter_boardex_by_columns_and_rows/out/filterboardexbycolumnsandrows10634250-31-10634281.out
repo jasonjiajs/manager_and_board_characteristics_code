@@ -1,0 +1,2083 @@
+-----------------------------------------------------------
+Output from Shell Script:
+Job ID: 10634281
+Job User: jasonjia
+Num Cores: 1
+Array(Task ID): 31 of 64
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: openpyxl in /home/jasonjia/.local/lib/python3.8/site-packages (3.1.2)
+Requirement already satisfied: et-xmlfile in /home/jasonjia/.local/lib/python3.8/site-packages (from openpyxl) (1.1.0)
+
+[notice] A new release of pip is available: 23.0.1 -> 23.1.2
+[notice] To update, run: pip install --upgrade pip
+Program Path: filter_boardex_by_columns_and_rows.py
+Filepath of .xslx containing list of columns in Boardex and ExecuComp: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_colstokeep/List_of_Variables_for_Boardex_and_Execucomp_010523.xlsx
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Input Folder: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex
+Output Folder: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows
+-----------------------------------------------------------
+Output from Python Script:
+This is array 31 / 64
+Filepath of .xslx containing list of columns in Boardex and ExecuComp: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_colstokeep/List_of_Variables_for_Boardex_and_Execucomp_010523.xlsx
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Input Folder (containing raw BoardEx .xlsx files): /project/kh_mercury_1/manager_and_board_characteristics/data/boardex
+Output Folder (after we filter by both columns and rows): /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows
+Total number of files in input folder: 3246
+This process will cover file(s): 1501 to 1550
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 337.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499852, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499852, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (131691, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 337.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 291.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498455, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498455, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (58042, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 291.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 327.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499363, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499363, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (58446, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 327.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 304.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499894, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499894, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (71376, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 304.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 276.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498742, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498742, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (141729, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 276.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 311.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498238, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498238, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (158496, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 311.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 316.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499970, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499970, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (216386, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 316.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 269.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499846, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499846, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (119355, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 269.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 265.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (496555, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (496555, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (109080, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 265.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 284.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499311, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499311, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (122908, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 284.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 348.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (495861, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (495861, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (133722, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 348.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 333.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499656, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499656, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (90703, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 333.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 295.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499180, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499180, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (101508, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 295.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 28.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499059, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499059, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (102037, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 28.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 306.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499723, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499723, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (162732, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 306.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 299.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (497129, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (497129, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (85143, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 299.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 328.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (496732, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (496732, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (78715, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 328.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 286.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (10837, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (10837, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (608, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 286.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 315.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499110, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499110, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (79159, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 315.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 332.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498633, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498633, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (104680, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 332.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 347.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (495499, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (495499, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (82466, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 347.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 296.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498001, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498001, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (107538, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 296.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 353.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499864, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499864, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (136333, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 353.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 266.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (497135, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (497135, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (76434, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 266.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 344.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499281, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499281, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (113486, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 344.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 338.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499882, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499882, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (111591, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 338.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 346.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (497940, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (497940, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (83274, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 346.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 323.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499805, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499805, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (92407, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 323.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 352.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (17050, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (17050, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (5638, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 352.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 305.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498144, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498144, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (91066, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 305.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 345.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498933, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498933, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (99635, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 345.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 288.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499249, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499249, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (53171, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 288.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 329.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (493114, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (493114, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (89183, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 329.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 354.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (496087, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (496087, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (84460, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 354.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 331.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498996, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498996, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (117067, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 331.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 339.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499688, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499688, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (109371, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 339.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 279.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499736, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499736, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (132901, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 279.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 271.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499073, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499073, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (148339, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 271.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 29.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499167, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499167, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (140133, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 29.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 340.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499094, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499094, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (117331, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 340.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 280.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (497272, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (497272, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (112222, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 280.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 342.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (497495, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (497495, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (116768, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 342.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 335.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499917, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499917, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (117696, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 335.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 312.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499642, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499642, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (60367, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 312.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 287.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (498602, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (498602, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (63632, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 287.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 35.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (496416, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (496416, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (106911, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 35.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 310.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499787, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499787, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (116697, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 310.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 290.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (496612, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (496612, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (33574, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 290.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 274.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (496815, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (496815, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (79998, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 274.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): NA - SMDEs Network - 301.xlsx
+Unique workbook name: SMDEs Network
+List of sheets to open: ['Director Network']
+------
+Sheet 0 : Director Network
+% NaNs in first row: 95.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499316, 22)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['DirectorID*', 'Last Name', 'First Name', 'Middle Name',
+       'Connected Director Details - Linked DirectorID*',
+       'Connected Director Details - Linked Last Name',
+       'Connected Director Details - Linked First Name',
+       'Connected Director Details - Linked Middle Name',
+       'Connected Director Details - Connected CompanyID*',
+       'Connected Director Details - Connected Company',
+       'Connected Director Details - Index',
+       'Connected Director Details - Sector',
+       'Connected Director Details - Country',
+       'Connected Director Details - Company Type',
+       'Connected Director Details - Overlapping Person's Role',
+       'Connected Director Details - Linked ED/NED/Non-Brd',
+       'Connected Director Details - Individual's Role Title',
+       'Connected Director Details - ED/NED/Non-Brd',
+       'Connected Director Details - Start Overlap',
+       'Connected Director Details - End Overlap',
+       'Connected Director Details - Current/Historic',
+       'Connected Director Details - Duration (Years)'],
+      dtype='object')
+/home/jasonjia/.local/lib/python3.8/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Conditional Formatting extension is not supported and will be removed
+  warn(msg)
+List of cols to keep (after processing): ['DirectorID*', 'Last Name', 'First Name', 'Middle Name', 'Connected Director Details - Linked DirectorID*', 'Connected Director Details - Linked Last Name', 'Connected Director Details - Linked First Name', 'Connected Director Details - Linked Middle Name', 'Connected Director Details - Connected CompanyID*', 'Connected Director Details - Connected Company', 'Connected Director Details - Index', 'Connected Director Details - Sector', 'Connected Director Details - Country', 'Connected Director Details - Company Type', "Connected Director Details - Overlapping Person's Role", 'Connected Director Details - Linked ED/NED/Non-Brd', "Connected Director Details - Individual's Role Title", 'Connected Director Details - ED/NED/Non-Brd', 'Connected Director Details - Start Overlap', 'Connected Director Details - End Overlap', 'Connected Director Details - Current/Historic', 'Connected Director Details - Duration (Years)']
+df.shape: (499316, 22)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (75123, 22)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/NA - SMDEs Network - 301.xlsx
+Done!
+-----------------------------------------------------------
+List of files kept: ['NA - SMDEs Network - 337.xlsx', 'NA - SMDEs Network - 291.xlsx', 'NA - SMDEs Network - 327.xlsx', 'NA - SMDEs Network - 304.xlsx', 'NA - SMDEs Network - 276.xlsx', 'NA - SMDEs Network - 311.xlsx', 'NA - SMDEs Network - 316.xlsx', 'NA - SMDEs Network - 269.xlsx', 'NA - SMDEs Network - 265.xlsx', 'NA - SMDEs Network - 284.xlsx', 'NA - SMDEs Network - 348.xlsx', 'NA - SMDEs Network - 333.xlsx', 'NA - SMDEs Network - 295.xlsx', 'NA - SMDEs Network - 28.xlsx', 'NA - SMDEs Network - 306.xlsx', 'NA - SMDEs Network - 299.xlsx', 'NA - SMDEs Network - 328.xlsx', 'NA - SMDEs Network - 286.xlsx', 'NA - SMDEs Network - 315.xlsx', 'NA - SMDEs Network - 332.xlsx', 'NA - SMDEs Network - 347.xlsx', 'NA - SMDEs Network - 296.xlsx', 'NA - SMDEs Network - 353.xlsx', 'NA - SMDEs Network - 266.xlsx', 'NA - SMDEs Network - 344.xlsx', 'NA - SMDEs Network - 338.xlsx', 'NA - SMDEs Network - 346.xlsx', 'NA - SMDEs Network - 323.xlsx', 'NA - SMDEs Network - 352.xlsx', 'NA - SMDEs Network - 305.xlsx', 'NA - SMDEs Network - 345.xlsx', 'NA - SMDEs Network - 288.xlsx', 'NA - SMDEs Network - 329.xlsx', 'NA - SMDEs Network - 354.xlsx', 'NA - SMDEs Network - 331.xlsx', 'NA - SMDEs Network - 339.xlsx', 'NA - SMDEs Network - 279.xlsx', 'NA - SMDEs Network - 271.xlsx', 'NA - SMDEs Network - 29.xlsx', 'NA - SMDEs Network - 340.xlsx', 'NA - SMDEs Network - 280.xlsx', 'NA - SMDEs Network - 342.xlsx', 'NA - SMDEs Network - 335.xlsx', 'NA - SMDEs Network - 312.xlsx', 'NA - SMDEs Network - 287.xlsx', 'NA - SMDEs Network - 35.xlsx', 'NA - SMDEs Network - 310.xlsx', 'NA - SMDEs Network - 290.xlsx', 'NA - SMDEs Network - 274.xlsx', 'NA - SMDEs Network - 301.xlsx']
+------
+List of files not kept: []
+Done!

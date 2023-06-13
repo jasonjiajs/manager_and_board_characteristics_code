@@ -1,0 +1,52 @@
+-------------------------------------------
+Job ID: 10633502
+Job User: jasonjia
+Num Cores: 8
+Array(Task ID): 1 of 8
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: openpyxl in /home/jasonjia/.local/lib/python3.8/site-packages (3.1.2)
+Requirement already satisfied: et-xmlfile in /home/jasonjia/.local/lib/python3.8/site-packages (from openpyxl) (1.1.0)
+
+[notice] A new release of pip is available: 23.0.1 -> 23.1.2
+[notice] To update, run: pip install --upgrade pip
+Program Path: filter_data_by_rows.py
+Input Directory: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/uk_smallfiles
+Output Directory: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+-------------------------------------------
+This is array 1 / 8
+Input Dir: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/uk_smallfiles
+Output Dir: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Total number of files: 24
+This process will cover file(s): 1 to 3
+-------------------------------------------
+Filepath: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/uk_smallfiles/UK - Director Profile - Employment Current NonBoard.xlsx
+% NaNs in first row 0.0 <= 50%, taking header = row 0 as usual
+df.columns: Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date'],
+      dtype='object')
+Shape of filtered df: (1098, 14)
+Saved filtered df to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows/UK - Director Profile - Employment Current NonBoard_filtered.xlsx
+-------------------------------------------
+Filepath: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/uk_smallfiles/UK - SMDEs Profile - Employment Current NonBoard.xlsx
+% NaNs in first row 0.0 <= 50%, taking header = row 0 as usual
+df.columns: Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date'],
+      dtype='object')
+Shape of filtered df: (4601, 14)
+Saved filtered df to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows/UK - SMDEs Profile - Employment Current NonBoard_filtered.xlsx
+-------------------------------------------
+Filepath: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/uk_smallfiles/UK - SMDEs Profile - Characteristics.xlsx
+% NaNs in first row: 73.3 > 50%, taking category = row 0 and variable name = row 1
+df.columns: Index(['Director Name', 'DirectorID*', 'Age', 'DOB', 'DOD', 'Gender',
+       'Nationality', 'Annual Report Year', 'Boards to Date - Quoted',
+       'Boards to Date - Private', 'Boards to Date - Other',
+       'Current Boards - Quoted', 'Current Boards - Private',
+       'Current Boards - Other', 'Avg Years on Quoted Boards'],
+      dtype='object')
+No column found that contains 'companyid', skipping df
+-------------------------------------------
+Done!

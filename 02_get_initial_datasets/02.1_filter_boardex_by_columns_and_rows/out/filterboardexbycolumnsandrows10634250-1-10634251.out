@@ -1,0 +1,2686 @@
+-----------------------------------------------------------
+Output from Shell Script:
+Job ID: 10634251
+Job User: jasonjia
+Num Cores: 1
+Array(Task ID): 1 of 64
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: openpyxl in /home/jasonjia/.local/lib/python3.8/site-packages (3.1.2)
+Requirement already satisfied: et-xmlfile in /home/jasonjia/.local/lib/python3.8/site-packages (from openpyxl) (1.1.0)
+
+[notice] A new release of pip is available: 23.0.1 -> 23.1.2
+[notice] To update, run: pip install --upgrade pip
+Program Path: filter_boardex_by_columns_and_rows.py
+Filepath of .xslx containing list of columns in Boardex and ExecuComp: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_colstokeep/List_of_Variables_for_Boardex_and_Execucomp_010523.xlsx
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Input Folder: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex
+Output Folder: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows
+-----------------------------------------------------------
+Output from Python Script:
+This is array 1 / 64
+Filepath of .xslx containing list of columns in Boardex and ExecuComp: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_colstokeep/List_of_Variables_for_Boardex_and_Execucomp_010523.xlsx
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Input Folder (containing raw BoardEx .xlsx files): /project/kh_mercury_1/manager_and_board_characteristics/data/boardex
+Output Folder (after we filter by both columns and rows): /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows
+Total number of files in input folder: 3246
+This process will cover file(s): 1 to 50
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Mapping File.xlsx
+Unique workbook name: SMDEs Mapping File
+List of sheets to open: ['Sheet1']
+------
+Sheet 0 : Sheet1
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (146943, 3)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Bex Dir ID', 'DirectorID*', 'Director Name'], dtype='object')
+List of cols to keep (after processing): ['Bex Dir ID', 'DirectorID*', 'Director Name']
+df.shape: (146943, 3)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (146943, 3)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Mapping File.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Board Summary - 2.xlsx
+Unique workbook name: Board Summary
+List of sheets to open: ['Board Summary']
+------
+Sheet 0 : Board Summary
+% NaNs in first row: 82.2 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (6880, 73)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN',
+       'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*',
+       'Individual Name', 'Characteristics of Roles - Individual Role',
+       'Characteristics of Roles - Director Network Size',
+       'Characteristics of Roles - Time to Retirement',
+       'Characteristics of Roles - Time in Role',
+       'Characteristics of Roles - Time on Board',
+       'Characteristics of Roles - Time in Company',
+       'Director Experience - Total Number of Quoted Boards to Date',
+       'Director Experience - Total Number of Private Boards to Date',
+       'Director Experience - Total Number of Other Boards to Date',
+       'Director Experience - Total Number of Quoted Current Boards',
+       'Director Experience - Total Number of Private Current Boards',
+       'Director Experience - Total Number of Other Current Boards',
+       'Director Experience - Avg. Yrs on Other Quoted Boards',
+       'Director Experience - Age (Yrs)',
+       'Director Experience - Number of Qualifications',
+       'Director Experience - Gender', 'Director Experience - Nationality Mix',
+       'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total',
+       'Ratios - Performance/ Total', 'Ratios - %Change from Last Period',
+       'Ratios - Wealth Delta',
+       'Director Count Totals - Total Directors on the Board',
+       'Director Count Totals - Number of SDs on Board',
+       'Director Count Totals - Number of Independent NED on Board',
+       'Director Count Totals - Executive Chairman present on Board or Combined role of CEO & Chairman is present (1- Yes, 0 - No)',
+       'Director Count Totals - Number of Independent NED with past CFO/FD role',
+       'Annual Direct Compensation - Salary',
+       'Annual Direct Compensation - Bonus',
+       'Annual Direct Compensation - D.C Pension',
+       'Annual Direct Compensation - Other',
+       'Annual Direct Compensation - Total Salary+Bonus',
+       'Annual Direct Compensation - Total Inc. D.C. Pension & Other',
+       'Annual- Equity Linked Options - Shares',
+       'Annual- Equity Linked Options - LTIPS(max)',
+       'Annual- Equity Linked Options - Vesting Date',
+       'Annual- Equity Linked Options - Intrinsic Options (excercisable)',
+       'Annual- Equity Linked Options - Intrinsic Options (unexercisable)',
+       'Annual- Equity Linked Options - Estimated Options (exercisable)',
+       'Annual- Equity Linked Options - Estimated Options (unexcercisable)',
+       'Annual- Equity Linked Options - Share Price',
+       'Annual- Equity Linked Options - Total Equity Linked Compensation',
+       'Total - Total Annual Compensation', 'Accumulated Wealth - Shares',
+       'Accumulated Wealth - LTIPS(max)',
+       'Accumulated Wealth - Intrinsic Option',
+       'Accumulated Wealth - Estimated Option',
+       'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth',
+       'Committee Members - AUDIT COMMITTEE MEMBER (if yes then put M)',
+       'Committee Members - REMUNERATION/ COMPENSATION COMMITTEE MEMBER',
+       'Committee Members - NOMINATION COMMITTEE MEMBER',
+       'Committee Size - AUDIT COMMITTEE SIZE',
+       'Committee Size - REMUNERATION/ COMPENSATION COMMITTEE SIZE',
+       'Committee Size - NOMINATION COMMITTEE SIZE',
+       'Number of Independent NEDs in Committee - Number of Independent NED on Audit Committee',
+       'Number of Independent NEDs in Committee - Number of Independent NED on Remuneration/ Compensation Committee',
+       'Number of Independent NEDs in Committee - Number of Independent NED on Nomination Committee',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED on Audit (excluding Chairman Independent NED)',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED on Remuneration/ Compensation (excluding Chairman Independent NED)',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED on Nomination (excluding Chairman Independent NED)',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED with functional expertise on Audit Committee'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*', 'Individual Name', 'Characteristics of Roles - Individual Role', 'Characteristics of Roles - Director Network Size', 'Characteristics of Roles - Time to Retirement', 'Characteristics of Roles - Time in Role', 'Characteristics of Roles - Time on Board', 'Characteristics of Roles - Time in Company', 'Director Experience - Total Number of Quoted Boards to Date', 'Director Experience - Total Number of Private Boards to Date', 'Director Experience - Total Number of Other Boards to Date', 'Director Experience - Total Number of Quoted Current Boards', 'Director Experience - Total Number of Private Current Boards', 'Director Experience - Total Number of Other Current Boards', 'Director Experience - Avg. Yrs on Other Quoted Boards', 'Director Experience - Age (Yrs)', 'Director Experience - Number of Qualifications', 'Director Experience - Gender', 'Director Experience - Nationality Mix', 'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total', 'Ratios - Performance/ Total', 'Ratios - %Change from Last Period', 'Ratios - Wealth Delta', 'Director Count Totals - Number of Independent NED with past CFO/FD role', 'Annual Direct Compensation - Salary', 'Annual Direct Compensation - Bonus', 'Annual Direct Compensation - D.C Pension', 'Annual Direct Compensation - Other', 'Annual Direct Compensation - Total Salary+Bonus', 'Annual Direct Compensation - Total Inc. D.C. Pension & Other', 'Annual- Equity Linked Options - Shares', 'Annual- Equity Linked Options - LTIPS(max)', 'Annual- Equity Linked Options - Vesting Date', 'Annual- Equity Linked Options - Intrinsic Options (excercisable)', 'Annual- Equity Linked Options - Intrinsic Options (unexercisable)', 'Annual- Equity Linked Options - Estimated Options (exercisable)', 'Annual- Equity Linked Options - Estimated Options (unexcercisable)', 'Annual- Equity Linked Options - Share Price', 'Annual- Equity Linked Options - Total Equity Linked Compensation', 'Total - Total Annual Compensation', 'Accumulated Wealth - Shares', 'Accumulated Wealth - LTIPS(max)', 'Accumulated Wealth - Intrinsic Option', 'Accumulated Wealth - Estimated Option', 'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth']
+df.shape: (6880, 56)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (787, 56)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Board Summary - 2.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Employment Historical Board.xlsx
+Unique workbook name: SMDEs Profile - Employment Historical Board
+List of sheets to open: ['Historic Board Role']
+------
+Sheet 0 : Historic Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (127476, 17)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED', 'Start Date',
+       'End Date', 'Committee Name', 'Committee Role'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name', 'Company Type', 'Role', 'Role Description']
+df.shape: (127476, 12)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (8135, 12)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Employment Historical Board.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Employment Current Board.xlsx
+Unique workbook name: Director Profile - Employment Current Board
+List of sheets to open: ['Current Board Role']
+------
+Sheet 0 : Current Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (235802, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED', 'Start Date',
+       'Committee Name', 'Committee Role'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name', 'Company Type', 'Role', 'Role Description', 'ED/NED', 'Start Date', 'Committee Name', 'Committee Role']
+df.shape: (235802, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (11921, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Employment Current Board.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Board Summary - 1.xlsx
+Unique workbook name: Board Summary
+List of sheets to open: ['Board Summary']
+------
+Sheet 0 : Board Summary
+% NaNs in first row: 82.2 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499932, 73)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN',
+       'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*',
+       'Individual Name', 'Characteristics of Roles - Individual Role',
+       'Characteristics of Roles - Director Network Size',
+       'Characteristics of Roles - Time to Retirement',
+       'Characteristics of Roles - Time in Role',
+       'Characteristics of Roles - Time on Board',
+       'Characteristics of Roles - Time in Company',
+       'Director Experience - Total Number of Quoted Boards to Date',
+       'Director Experience - Total Number of Private Boards to Date',
+       'Director Experience - Total Number of Other Boards to Date',
+       'Director Experience - Total Number of Quoted Current Boards',
+       'Director Experience - Total Number of Private Current Boards',
+       'Director Experience - Total Number of Other Current Boards',
+       'Director Experience - Avg. Yrs on Other Quoted Boards',
+       'Director Experience - Age (Yrs)',
+       'Director Experience - Number of Qualifications',
+       'Director Experience - Gender', 'Director Experience - Nationality Mix',
+       'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total',
+       'Ratios - Performance/ Total', 'Ratios - %Change from Last Period',
+       'Ratios - Wealth Delta',
+       'Director Count Totals - Total Directors on the Board',
+       'Director Count Totals - Number of SDs on Board',
+       'Director Count Totals - Number of Independent NED on Board',
+       'Director Count Totals - Executive Chairman present on Board or Combined role of CEO & Chairman is present (1- Yes, 0 - No)',
+       'Director Count Totals - Number of Independent NED with past CFO/FD role',
+       'Annual Direct Compensation - Salary',
+       'Annual Direct Compensation - Bonus',
+       'Annual Direct Compensation - D.C Pension',
+       'Annual Direct Compensation - Other',
+       'Annual Direct Compensation - Total Salary+Bonus',
+       'Annual Direct Compensation - Total Inc. D.C. Pension & Other',
+       'Annual- Equity Linked Options - Shares',
+       'Annual- Equity Linked Options - LTIPS(max)',
+       'Annual- Equity Linked Options - Vesting Date',
+       'Annual- Equity Linked Options - Intrinsic Options (excercisable)',
+       'Annual- Equity Linked Options - Intrinsic Options (unexercisable)',
+       'Annual- Equity Linked Options - Estimated Options (exercisable)',
+       'Annual- Equity Linked Options - Estimated Options (unexcercisable)',
+       'Annual- Equity Linked Options - Share Price',
+       'Annual- Equity Linked Options - Total Equity Linked Compensation',
+       'Total - Total Annual Compensation', 'Accumulated Wealth - Shares',
+       'Accumulated Wealth - LTIPS(max)',
+       'Accumulated Wealth - Intrinsic Option',
+       'Accumulated Wealth - Estimated Option',
+       'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth',
+       'Committee Members - AUDIT COMMITTEE MEMBER (if yes then put M)',
+       'Committee Members - REMUNERATION/ COMPENSATION COMMITTEE MEMBER',
+       'Committee Members - NOMINATION COMMITTEE MEMBER',
+       'Committee Size - AUDIT COMMITTEE SIZE',
+       'Committee Size - REMUNERATION/ COMPENSATION COMMITTEE SIZE',
+       'Committee Size - NOMINATION COMMITTEE SIZE',
+       'Number of Independent NEDs in Committee - Number of Independent NED on Audit Committee',
+       'Number of Independent NEDs in Committee - Number of Independent NED on Remuneration/ Compensation Committee',
+       'Number of Independent NEDs in Committee - Number of Independent NED on Nomination Committee',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED on Audit (excluding Chairman Independent NED)',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED on Remuneration/ Compensation (excluding Chairman Independent NED)',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED on Nomination (excluding Chairman Independent NED)',
+       'Independent NEDs excluding Chairman Independent NED - Number of Independent NED with functional expertise on Audit Committee'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*', 'Individual Name', 'Characteristics of Roles - Individual Role', 'Characteristics of Roles - Director Network Size', 'Characteristics of Roles - Time to Retirement', 'Characteristics of Roles - Time in Role', 'Characteristics of Roles - Time on Board', 'Characteristics of Roles - Time in Company', 'Director Experience - Total Number of Quoted Boards to Date', 'Director Experience - Total Number of Private Boards to Date', 'Director Experience - Total Number of Other Boards to Date', 'Director Experience - Total Number of Quoted Current Boards', 'Director Experience - Total Number of Private Current Boards', 'Director Experience - Total Number of Other Current Boards', 'Director Experience - Avg. Yrs on Other Quoted Boards', 'Director Experience - Age (Yrs)', 'Director Experience - Number of Qualifications', 'Director Experience - Gender', 'Director Experience - Nationality Mix', 'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total', 'Ratios - Performance/ Total', 'Ratios - %Change from Last Period', 'Ratios - Wealth Delta', 'Director Count Totals - Number of Independent NED with past CFO/FD role', 'Annual Direct Compensation - Salary', 'Annual Direct Compensation - Bonus', 'Annual Direct Compensation - D.C Pension', 'Annual Direct Compensation - Other', 'Annual Direct Compensation - Total Salary+Bonus', 'Annual Direct Compensation - Total Inc. D.C. Pension & Other', 'Annual- Equity Linked Options - Shares', 'Annual- Equity Linked Options - LTIPS(max)', 'Annual- Equity Linked Options - Vesting Date', 'Annual- Equity Linked Options - Intrinsic Options (excercisable)', 'Annual- Equity Linked Options - Intrinsic Options (unexercisable)', 'Annual- Equity Linked Options - Estimated Options (exercisable)', 'Annual- Equity Linked Options - Estimated Options (unexcercisable)', 'Annual- Equity Linked Options - Share Price', 'Annual- Equity Linked Options - Total Equity Linked Compensation', 'Total - Total Annual Compensation', 'Accumulated Wealth - Shares', 'Accumulated Wealth - LTIPS(max)', 'Accumulated Wealth - Intrinsic Option', 'Accumulated Wealth - Estimated Option', 'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth']
+df.shape: (499932, 56)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (63029, 56)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Board Summary - 1.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Employment Historical Board - 2.xlsx
+Unique workbook name: Director Profile - Employment Historical Board
+List of sheets to open: ['Historic Board Role']
+------
+Sheet 0 : Historic Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (38718, 17)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED', 'Start Date',
+       'End Date', 'Committee Name', 'Committee Role'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name', 'Company Type', 'Role', 'Role Description']
+df.shape: (38718, 12)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (5083, 12)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Employment Historical Board - 2.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Characteristics - 2.xlsx
+Unique workbook name: SMDEs Profile - Characteristics
+List of sheets to open: ['Charcteristics']
+------
+Sheet 0 : Charcteristics
+% NaNs in first row: 73.3 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (137023, 15)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Director Name', 'DirectorID*', 'Age', 'DOB', 'DOD', 'Gender',
+       'Nationality', 'Annual Report Year', 'Boards to Date - Quoted',
+       'Boards to Date - Private', 'Boards to Date - Other',
+       'Current Boards - Quoted', 'Current Boards - Private',
+       'Current Boards - Other', 'Avg Years on Quoted Boards'],
+      dtype='object')
+List of cols to keep (after processing): ['Director Name', 'DirectorID*', 'Age', 'DOB', 'DOD', 'Gender', 'Nationality', 'Annual Report Year', 'Boards to Date - Quoted', 'Boards to Date - Private', 'Boards to Date - Other', 'Current Boards - Quoted', 'Current Boards - Private', 'Current Boards - Other', 'Avg Years on Quoted Boards']
+df.shape: (137023, 15)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (137023, 15)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Characteristics - 2.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Other Activities.xlsx
+Unique workbook name: Director Profile - Other Activities
+List of sheets to open: ['Current Other Activities Tab']
+------
+Sheet 0 : Current Other Activities Tab
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (79240, 8)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Role', 'Role Description', 'Start Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*']
+df.shape: (79240, 4)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (3, 4)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Other Activities.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Org Analysis Averages.xlsx
+Unique workbook name: Org Analysis Averages
+List of sheets to open: ['Org Analysis Averages']
+------
+Sheet 0 : Org Analysis Averages
+% NaNs in first row: 93.5 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (62041, 77)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Organisation Analysis & Averages - Company Name',
+       'Organisation Analysis & Averages - CompanyID*',
+       'Organisation Analysis & Averages - ISIN',
+       'Organisation Analysis & Averages - Ticker',
+       'Organisation Analysis & Averages - Index',
+       'Organisation Analysis & Averages - Sector',
+       'Organisation Analysis & Averages - Country',
+       'Organisation Analysis & Averages - Report Year',
+       'Organisation Analysis & Averages - Total Number of Board Members',
+       'Organisation Analysis & Averages - Total Number of EDs',
+       'Organisation Analysis & Averages - Total Number of NEDs',
+       'Organisation Analysis & Averages - Independent SD Ratio',
+       'Organisation Analysis & Averages - CEO and Chairman Roles are combined on the Board',
+       'Organisation Analysis & Averages - Average Salary EDs',
+       'Organisation Analysis & Averages - Average Salary NEDs',
+       'Organisation Analysis & Averages - Average Bonus EDs',
+       'Organisation Analysis & Averages - Average Bonus NEDs',
+       'Organisation Analysis & Averages - Average Total Direct Compensation for EDs',
+       'Organisation Analysis & Averages - Average Total Direct Compensation for NEDs',
+       'Organisation Analysis & Averages - Average Equity-Linked Shares for EDs',
+       'Organisation Analysis & Averages - Average Equity-Linked Shares for NEDs',
+       'Organisation Analysis & Averages - Average Equity-Linked LTIPs for EDs',
+       'Organisation Analysis & Averages - Average Equity-Linked LTIPs for NEDs',
+       'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for EDs -intrinsic',
+       'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for NEDs -intrinsic',
+       'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for EDs -estimated',
+       'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for NEDs -estimated',
+       'Organisation Analysis & Averages - Average Total Equity-Linked Compensation for EDs',
+       'Organisation Analysis & Averages - Average Total Equity-Linked Compensation for NEDs',
+       'Organisation Analysis & Averages - Average Wealth Shares EDs',
+       'Organisation Analysis & Averages - ED Total Wealth Shares',
+       'Organisation Analysis & Averages - Average Wealth Shares NEDs',
+       'Organisation Analysis & Averages - NED Total Wealth Shares',
+       'Organisation Analysis & Averages - Average Wealth LTIPs EDs',
+       'Organisation Analysis & Averages - ED Total Wealth LTIPS',
+       'Organisation Analysis & Averages - Average Wealth LTIPs NEDs',
+       'Organisation Analysis & Averages - NED Total Wealth LTIPS',
+       'Organisation Analysis & Averages - Average Wealth Shares under Options for EDs -intrinsic',
+       'Organisation Analysis & Averages - ED Total Wealth Shares under Options  -intrinsic',
+       'Organisation Analysis & Averages - Average Wealth Shares under Options for NEDs -intrinsic',
+       'Organisation Analysis & Averages - NED Total Wealth Shares under Options -intrinsic',
+       'Organisation Analysis & Averages - Average Wealth Shares under Options for EDs -estimated',
+       'Organisation Analysis & Averages - ED Total Wealth Shares under Options - estimated',
+       'Organisation Analysis & Averages - Average Wealth Shares under Options for NEDs - estimated',
+       'Organisation Analysis & Averages - NED Total Wealth Shares under Options - estimated',
+       'Organisation Analysis & Averages - Liquid Wealth ED Average',
+       'Organisation Analysis & Averages - Liquid Wealth ED Total',
+       'Organisation Analysis & Averages - Liquid Wealth NED Average',
+       'Organisation Analysis & Averages - Liquid Wealth NED Total',
+       'Organisation Analysis & Averages - Average time in role for EDs',
+       'Organisation Analysis & Averages - Average time in role for NEDs',
+       'Average Boards to Date ED's - Quoted',
+       'Average Boards to Date ED's - Private',
+       'Average Boards to Date ED's - Other',
+       'Average Boards to Date NED's - Quoted',
+       'Average Boards to Date NED's - Private',
+       'Average Boards to Date NED's - Other',
+       'Average Boards Currently ED's - Quoted',
+       'Average Boards Currently ED's - Private',
+       'Average Boards Currently ED's - Other',
+       'Average Boards Currently NED's - Quoted',
+       'Average Boards Currently NED's - Private',
+       'Average Boards Currently NED's - Other',
+       'Average Boards Currently NED's - Average years on Other Quoted Boards EDs',
+       'Average Boards Currently NED's - Average years on Other Quoted Boards NEDs',
+       'Average Boards Currently NED's - Average Age EDs',
+       'Average Boards Currently NED's - Average Age NEDs',
+       'Average Boards Currently NED's - Average Number of Education EDs',
+       'Average Boards Currently NED's - Average Number of Education NED',
+       'Average Boards Currently NED's - Gender (% Male) EDs',
+       'Average Boards Currently NED's - Gender (% Male) NED',
+       'Average Boards Currently NED's - Nationality Mix ED',
+       'Average Boards Currently NED's - Nationality Mix NED',
+       'Average Boards Currently NED's - Attrition (%) 1 Year ED',
+       'Average Boards Currently NED's - Attrition (%) 1 Year NED',
+       'Average Boards Currently NED's - Attrition (%) 3 Year ED',
+       'Average Boards Currently NED's - Attrition (%) 3 Year NED'],
+      dtype='object')
+List of cols to keep (after processing): ['Organisation Analysis & Averages - Company Name', 'Organisation Analysis & Averages - CompanyID*', 'Organisation Analysis & Averages - ISIN', 'Organisation Analysis & Averages - Ticker', 'Organisation Analysis & Averages - Index', 'Organisation Analysis & Averages - Sector', 'Organisation Analysis & Averages - Country', 'Organisation Analysis & Averages - Report Year', 'Organisation Analysis & Averages - Total Number of Board Members', 'Organisation Analysis & Averages - Total Number of EDs', 'Organisation Analysis & Averages - Total Number of NEDs', 'Organisation Analysis & Averages - Independent SD Ratio', 'Organisation Analysis & Averages - CEO and Chairman Roles are combined on the Board', 'Organisation Analysis & Averages - Average Salary EDs', 'Organisation Analysis & Averages - Average Salary NEDs', 'Organisation Analysis & Averages - Average Bonus EDs', 'Organisation Analysis & Averages - Average Bonus NEDs', 'Organisation Analysis & Averages - Average Total Direct Compensation for EDs', 'Organisation Analysis & Averages - Average Total Direct Compensation for NEDs', 'Organisation Analysis & Averages - Average Equity-Linked Shares for EDs', 'Organisation Analysis & Averages - Average Equity-Linked Shares for NEDs', 'Organisation Analysis & Averages - Average Equity-Linked LTIPs for EDs', 'Organisation Analysis & Averages - Average Equity-Linked LTIPs for NEDs', 'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for EDs -intrinsic', 'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for NEDs -intrinsic', 'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for EDs -estimated', 'Organisation Analysis & Averages - Average Equity-Linked Shares under Options for NEDs -estimated', 'Organisation Analysis & Averages - Average Total Equity-Linked Compensation for EDs', 'Organisation Analysis & Averages - Average Total Equity-Linked Compensation for NEDs', 'Organisation Analysis & Averages - Average Wealth Shares EDs', 'Organisation Analysis & Averages - ED Total Wealth Shares', 'Organisation Analysis & Averages - Average Wealth Shares NEDs', 'Organisation Analysis & Averages - NED Total Wealth Shares', 'Organisation Analysis & Averages - Average Wealth LTIPs EDs', 'Organisation Analysis & Averages - ED Total Wealth LTIPS', 'Organisation Analysis & Averages - Average Wealth LTIPs NEDs', 'Organisation Analysis & Averages - NED Total Wealth LTIPS', 'Organisation Analysis & Averages - Average Wealth Shares under Options for EDs -intrinsic', 'Organisation Analysis & Averages - ED Total Wealth Shares under Options\xa0 -intrinsic', 'Organisation Analysis & Averages - Average Wealth Shares under Options for NEDs -intrinsic', 'Organisation Analysis & Averages - NED Total Wealth Shares under Options -intrinsic', 'Organisation Analysis & Averages - Average Wealth Shares under Options for EDs -estimated', 'Organisation Analysis & Averages - ED Total Wealth Shares under Options - estimated', 'Organisation Analysis & Averages - Average Wealth Shares under Options for NEDs - estimated', 'Organisation Analysis & Averages - NED Total Wealth Shares under Options - estimated', 'Organisation Analysis & Averages - Liquid Wealth ED Average', 'Organisation Analysis & Averages - Liquid Wealth ED Total', 'Organisation Analysis & Averages - Liquid Wealth NED Average', 'Organisation Analysis & Averages - Liquid Wealth NED Total', 'Organisation Analysis & Averages - Average time in role for EDs', 'Organisation Analysis & Averages - Average time in role for NEDs', "Average Boards Currently NED's - Average Age EDs", "Average Boards Currently NED's - Average Age NEDs", "Average Boards Currently NED's - Average Number of Education EDs", "Average Boards Currently NED's - Average Number of Education NED", "Average Boards Currently NED's - Gender (% Male) EDs", "Average Boards Currently NED's - Gender (% Male) NED", "Average Boards Currently NED's - Nationality Mix ED", "Average Boards Currently NED's - Nationality Mix NED", "Average Boards Currently NED's - Attrition (%) 1 Year ED", "Average Boards Currently NED's - Attrition (%) 1 Year NED", "Average Boards Currently NED's - Attrition (%) 3 Year ED", "Average Boards Currently NED's - Attrition (%) 3 Year NED"]
+df.shape: (62041, 63)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (6655, 63)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Org Analysis Averages.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Committee Details.xlsx
+Unique workbook name: Committee Details
+List of sheets to open: [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 'Current']
+------
+Sheet 0 : 1999
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (44, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (44, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (44, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 1 : 2000
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (233, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (233, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (233, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 2 : 2001
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (325, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (325, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (325, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 3 : 2002
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (468, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (468, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (468, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 4 : 2003
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (1143, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (1143, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (1143, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 5 : 2004
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (2728, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (2728, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (2728, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 6 : 2005
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4389, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (4389, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (4389, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 7 : 2006
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5524, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (5524, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (5524, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 8 : 2007
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (9414, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (9414, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (9414, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 9 : 2008
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (14635, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (14635, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (14635, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 10 : 2009
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (15713, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (15713, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (15713, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 11 : 2010
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (23126, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (23126, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (23126, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 12 : 2011
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (28181, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (28181, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (28181, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 13 : 2012
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (33440, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (33440, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (33440, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 14 : 2013
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (38628, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (38628, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (38628, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 15 : 2014
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (43289, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (43289, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (43289, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 16 : 2015
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (50334, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (50334, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (50334, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 17 : 2016
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (53114, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (53114, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (53114, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 18 : 2017
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (58378, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (58378, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (58378, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 19 : 2018
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (65190, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (65190, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (65190, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 20 : 2019
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (72137, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (72137, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (72137, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 21 : 2020
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (39099, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (39099, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (39099, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 22 : 2021
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (9, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (9, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (9, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 23 : Current
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (74679, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name', 'Director Type']
+df.shape: (74679, 11)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (7817, 11)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Committee Details_Current.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Details Mapping File.xlsx
+Unique workbook name: Director Details Mapping File
+List of sheets to open: ['Sheet1']
+------
+Sheet 0 : Sheet1
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (95020, 3)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Bex Dir ID', 'DirectorID*', 'Director Name'], dtype='object')
+List of cols to keep (after processing): ['Bex Dir ID', 'DirectorID*', 'Director Name']
+df.shape: (95020, 3)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (95020, 3)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Details Mapping File.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Company Announcements.xlsx
+Unique workbook name: SMDEs Company Announcements
+List of sheets to open: ['Announcements']
+------
+Sheet 0 : Announcements
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (16342, 10)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Announcement Date', 'Effective Date', 'CompanyID*', 'Company Name',
+       'ISIN', 'DirectorID*', 'Director Name', 'Gender', 'Role',
+       'Description'],
+      dtype='object')
+List of cols to keep (after processing): ['CompanyID*', 'Company Name', 'ISIN', 'DirectorID*', 'Director Name']
+df.shape: (16342, 5)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (4428, 5)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Company Announcements.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Employment Historical Board - 1.xlsx
+Unique workbook name: Director Profile - Employment Historical Board
+List of sheets to open: ['Historic Board Role']
+------
+Sheet 0 : Historic Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (499999, 17)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED', 'Start Date',
+       'End Date', 'Committee Name', 'Committee Role'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name', 'Company Type', 'Role', 'Role Description']
+df.shape: (499999, 12)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (41940, 12)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Employment Historical Board - 1.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Education & Achievements.xlsx
+Unique workbook name: SMDEs Profile - Education & Achievements
+List of sheets to open: ['Education', 'Achievements']
+------
+Sheet 0 : Education
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (202691, 9)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'InstitutionID*',
+       'Institution Name', 'Company Type', 'Qualification',
+       'Qualification Description', 'Qualification Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'InstitutionID*', 'Institution Name', 'Company Type', 'Qualification', 'Qualification Description', 'Qualification Date']
+df.shape: (202691, 9)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (202691, 9)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Education & Achievements_Education.xlsx
+Done!
+------
+Sheet 1 : Achievements
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (20744, 7)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'OrganisationID*',
+       'OrganisationName', 'Achievement Date', 'Award/Achievement'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'OrganisationID*', 'OrganisationName', 'Achievement Date', 'Award/Achievement']
+df.shape: (20744, 7)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (20744, 7)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Education & Achievements_Achievements.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Characteristics.xlsx
+Unique workbook name: Director Profile - Characteristics
+List of sheets to open: ['Charcteristics']
+------
+Sheet 0 : Charcteristics
+% NaNs in first row: 73.3 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (420268, 15)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Director Name', 'DirectorID*', 'Age', 'DOB', 'DOD', 'Gender',
+       'Nationality', 'Annual Report Year', 'Boards to Date - Quoted',
+       'Boards to Date - Private', 'Boards to Date - Other',
+       'Current Boards - Quoted', 'Current Boards - Private',
+       'Current Boards - Other', 'Avg Years on Quoted Boards'],
+      dtype='object')
+List of cols to keep (after processing): ['Director Name', 'DirectorID*', 'Age', 'DOB', 'DOD', 'Gender', 'Nationality', 'Annual Report Year', 'Boards to Date - Quoted', 'Boards to Date - Private', 'Boards to Date - Other', 'Current Boards - Quoted', 'Current Boards - Private', 'Current Boards - Other', 'Avg Years on Quoted Boards']
+df.shape: (420268, 15)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (420268, 15)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Characteristics.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Employment Historical NonBoard.xlsx
+Unique workbook name: Director Profile - Employment Historical NonBoard
+List of sheets to open: ['Historic Non Board Role']
+------
+Sheet 0 : Historic Non Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (406905, 15)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date',
+       'End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index']
+df.shape: (406905, 8)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (29963, 8)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Employment Historical NonBoard.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Employment Current NonBoard.xlsx
+Unique workbook name: SMDEs Profile - Employment Current NonBoard
+List of sheets to open: ['Current Non Board Role']
+------
+Sheet 0 : Current Non Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (128309, 14)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name', 'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date']
+df.shape: (128309, 14)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (10137, 14)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Employment Current NonBoard.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Employment Historical NonBoard - 1.xlsx
+Unique workbook name: SMDEs Profile - Employment Historical NonBoard
+List of sheets to open: ['Historic Non Board Role']
+------
+Sheet 0 : Historic Non Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (499998, 15)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date',
+       'End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index']
+df.shape: (499998, 8)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (48084, 8)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Employment Historical NonBoard - 1.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Details.xlsx
+Unique workbook name: Company Details
+List of sheets to open: ['Company Details']
+------
+Sheet 0 : Company Details
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (9056, 21)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['CompanyID*', 'Company Name', 'HOAddress1', 'HOAddress2', 'HOAddress3',
+       'HOAddress4', 'HOAddress5', 'HOCountryName', 'HO TelNumber',
+       'HO FaxNumber', 'HO URL', 'CIK Code', 'ISIN', 'Ticker', 'Index',
+       'Sector', 'Market Cap', 'Revenue at Year End', 'Latest AR', 'Auditors',
+       'Bankers'],
+      dtype='object')
+List of cols to keep (after processing): ['CompanyID*', 'Company Name', 'HOAddress1', 'HOAddress2', 'HOAddress3', 'HOAddress4', 'HOAddress5', 'HOCountryName', 'HO TelNumber', 'HO FaxNumber', 'HO URL', 'CIK Code', 'ISIN', 'Ticker', 'Index', 'Sector', 'Market Cap', 'Latest AR', 'Auditors', 'Bankers']
+df.shape: (9056, 20)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (586, 20)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Details.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Employment Current NonBoard.xlsx
+Unique workbook name: Director Profile - Employment Current NonBoard
+List of sheets to open: ['Current Non Board Role']
+------
+Sheet 0 : Current Non Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (64161, 14)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name', 'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date']
+df.shape: (64161, 14)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1899, 14)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Employment Current NonBoard.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Employment Current Board.xlsx
+Unique workbook name: SMDEs Profile - Employment Current Board
+List of sheets to open: ['Current Board Role']
+------
+Sheet 0 : Current Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (64850, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED', 'Start Date',
+       'Committee Name', 'Committee Role'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name', 'Company Type', 'Role', 'Role Description', 'ED/NED', 'Start Date', 'Committee Name', 'Committee Role']
+df.shape: (64850, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (2797, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Employment Current Board.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Org Summary - 1.xlsx
+Unique workbook name: SMDEs Org Summary
+List of sheets to open: ['Board Summary']
+------
+Sheet 0 : Board Summary
+% NaNs in first row: 83.6 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (499911, 61)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN',
+       'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*',
+       'Individual Name', 'Characteristics of Roles - Individual Role',
+       'Characteristics of Roles - Director Network Size',
+       'Characteristics of Roles - Time to Retirement',
+       'Characteristics of Roles - Time in Role',
+       'Characteristics of Roles - Time on Board',
+       'Characteristics of Roles - Time in Company',
+       'Director Experience - Total Number of Quoted Boards to Date',
+       'Director Experience - Total Number of Private Boards to Date',
+       'Director Experience - Total Number of Other Boards to Date',
+       'Director Experience - Total Number of Quoted Current Boards',
+       'Director Experience - Total Number of Private Current Boards',
+       'Director Experience - Total Number of Other Current Boards',
+       'Director Experience - Avg. Yrs on Other Quoted Boards',
+       'Director Experience - Age (Yrs)',
+       'Director Experience - Number of Qualifications',
+       'Director Experience - Gender', 'Director Experience - Nationality Mix',
+       'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total',
+       'Ratios - Performance/ Total', 'Ratios - %Change from Last Period',
+       'Ratios - Wealth Delta', 'Annual Direct Compensation - Salary',
+       'Annual Direct Compensation - Bonus',
+       'Annual Direct Compensation - D.C Pension',
+       'Annual Direct Compensation - Other',
+       'Annual Direct Compensation - Total Salary+Bonus',
+       'Annual Direct Compensation - Total Inc. D.C. Pension & Other',
+       'Annual- Equity Linked Options - Shares',
+       'Annual- Equity Linked Options - LTIPS(max)',
+       'Annual- Equity Linked Options - Vesting Date',
+       'Annual- Equity Linked Options - Intrinsic Options (excercisable)',
+       'Annual- Equity Linked Options - Intrinsic Options (unexercisable)',
+       'Annual- Equity Linked Options - Estimated Options (exercisable)',
+       'Annual- Equity Linked Options - Estimated Options (unexcercisable)',
+       'Annual- Equity Linked Options - Share Price',
+       'Annual- Equity Linked Options - Total Equity Linked Compensation',
+       'Total - Total Annual Compensation', 'Accumulated Wealth - Shares',
+       'Accumulated Wealth - LTIPS(max)',
+       'Accumulated Wealth - Intrinsic Option',
+       'Accumulated Wealth - Estimated Option',
+       'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth',
+       'Committee Members - AUDIT COMMITTEE MEMBER (if yes then put M)',
+       'Committee Members - REMUNERATION/ COMPENSATION COMMITTEE MEMBER',
+       'Committee Members - NOMINATION COMMITTEE MEMBER',
+       'Committee Size - AUDIT COMMITTEE SIZE',
+       'Committee Size - REMUNERATION/ COMPENSATION COMMITTEE SIZE',
+       'Committee Size - NOMINATION COMMITTEE SIZE'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*', 'Individual Name', 'Characteristics of Roles - Individual Role', 'Characteristics of Roles - Director Network Size', 'Characteristics of Roles - Time to Retirement', 'Characteristics of Roles - Time in Role', 'Characteristics of Roles - Time on Board', 'Characteristics of Roles - Time in Company', 'Director Experience - Total Number of Quoted Boards to Date', 'Director Experience - Total Number of Private Boards to Date', 'Director Experience - Total Number of Other Boards to Date', 'Director Experience - Total Number of Quoted Current Boards', 'Director Experience - Total Number of Private Current Boards', 'Director Experience - Total Number of Other Current Boards', 'Director Experience - Avg. Yrs on Other Quoted Boards', 'Director Experience - Age (Yrs)', 'Director Experience - Number of Qualifications', 'Director Experience - Gender', 'Director Experience - Nationality Mix', 'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total', 'Ratios - Performance/ Total', 'Ratios - %Change from Last Period', 'Ratios - Wealth Delta', 'Annual Direct Compensation - Salary', 'Annual Direct Compensation - Bonus', 'Annual Direct Compensation - D.C Pension', 'Annual Direct Compensation - Other', 'Annual Direct Compensation - Total Salary+Bonus', 'Annual Direct Compensation - Total Inc. D.C. Pension & Other', 'Annual- Equity Linked Options - Shares', 'Annual- Equity Linked Options - LTIPS(max)', 'Annual- Equity Linked Options - Vesting Date', 'Annual- Equity Linked Options - Intrinsic Options (excercisable)', 'Annual- Equity Linked Options - Intrinsic Options (unexercisable)', 'Annual- Equity Linked Options - Estimated Options (exercisable)', 'Annual- Equity Linked Options - Estimated Options (unexcercisable)', 'Annual- Equity Linked Options - Share Price', 'Annual- Equity Linked Options - Total Equity Linked Compensation', 'Total - Total Annual Compensation', 'Accumulated Wealth - Shares', 'Accumulated Wealth - LTIPS(max)', 'Accumulated Wealth - Intrinsic Option', 'Accumulated Wealth - Estimated Option', 'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth']
+df.shape: (499911, 55)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (81184, 55)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Org Summary - 1.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Announcements.xlsx
+Unique workbook name: Company Announcements
+List of sheets to open: ['Announcements']
+------
+Sheet 0 : Announcements
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (42106, 10)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Announcement Date', 'Effective Date', 'CompanyID*', 'Company Name',
+       'ISIN', 'DirectorID*', 'Director Name', 'Gender', 'Role',
+       'Description'],
+      dtype='object')
+List of cols to keep (after processing): ['CompanyID*', 'Company Name', 'ISIN', 'DirectorID*', 'Director Name']
+df.shape: (42106, 5)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (8414, 5)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Announcements.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Characteristics - 1.xlsx
+Unique workbook name: SMDEs Profile - Characteristics
+List of sheets to open: ['Charcteristics']
+------
+Sheet 0 : Charcteristics
+% NaNs in first row: 73.3 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (500000, 15)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Director Name', 'DirectorID*', 'Age', 'DOB', 'DOD', 'Gender',
+       'Nationality', 'Annual Report Year', 'Boards to Date - Quoted',
+       'Boards to Date - Private', 'Boards to Date - Other',
+       'Current Boards - Quoted', 'Current Boards - Private',
+       'Current Boards - Other', 'Avg Years on Quoted Boards'],
+      dtype='object')
+List of cols to keep (after processing): ['Director Name', 'DirectorID*', 'Age', 'DOB', 'DOD', 'Gender', 'Nationality', 'Annual Report Year', 'Boards to Date - Quoted', 'Boards to Date - Private', 'Boards to Date - Other', 'Current Boards - Quoted', 'Current Boards - Private', 'Current Boards - Other', 'Avg Years on Quoted Boards']
+df.shape: (500000, 15)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (500000, 15)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Characteristics - 1.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Org Summary - 2.xlsx
+Unique workbook name: SMDEs Org Summary
+List of sheets to open: ['Board Summary']
+------
+Sheet 0 : Board Summary
+% NaNs in first row: 83.6 > 30%, taking category = row 0 and variable name = row 1
+df.shape: (153215, 61)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN',
+       'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*',
+       'Individual Name', 'Characteristics of Roles - Individual Role',
+       'Characteristics of Roles - Director Network Size',
+       'Characteristics of Roles - Time to Retirement',
+       'Characteristics of Roles - Time in Role',
+       'Characteristics of Roles - Time on Board',
+       'Characteristics of Roles - Time in Company',
+       'Director Experience - Total Number of Quoted Boards to Date',
+       'Director Experience - Total Number of Private Boards to Date',
+       'Director Experience - Total Number of Other Boards to Date',
+       'Director Experience - Total Number of Quoted Current Boards',
+       'Director Experience - Total Number of Private Current Boards',
+       'Director Experience - Total Number of Other Current Boards',
+       'Director Experience - Avg. Yrs on Other Quoted Boards',
+       'Director Experience - Age (Yrs)',
+       'Director Experience - Number of Qualifications',
+       'Director Experience - Gender', 'Director Experience - Nationality Mix',
+       'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total',
+       'Ratios - Performance/ Total', 'Ratios - %Change from Last Period',
+       'Ratios - Wealth Delta', 'Annual Direct Compensation - Salary',
+       'Annual Direct Compensation - Bonus',
+       'Annual Direct Compensation - D.C Pension',
+       'Annual Direct Compensation - Other',
+       'Annual Direct Compensation - Total Salary+Bonus',
+       'Annual Direct Compensation - Total Inc. D.C. Pension & Other',
+       'Annual- Equity Linked Options - Shares',
+       'Annual- Equity Linked Options - LTIPS(max)',
+       'Annual- Equity Linked Options - Vesting Date',
+       'Annual- Equity Linked Options - Intrinsic Options (excercisable)',
+       'Annual- Equity Linked Options - Intrinsic Options (unexercisable)',
+       'Annual- Equity Linked Options - Estimated Options (exercisable)',
+       'Annual- Equity Linked Options - Estimated Options (unexcercisable)',
+       'Annual- Equity Linked Options - Share Price',
+       'Annual- Equity Linked Options - Total Equity Linked Compensation',
+       'Total - Total Annual Compensation', 'Accumulated Wealth - Shares',
+       'Accumulated Wealth - LTIPS(max)',
+       'Accumulated Wealth - Intrinsic Option',
+       'Accumulated Wealth - Estimated Option',
+       'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth',
+       'Committee Members - AUDIT COMMITTEE MEMBER (if yes then put M)',
+       'Committee Members - REMUNERATION/ COMPENSATION COMMITTEE MEMBER',
+       'Committee Members - NOMINATION COMMITTEE MEMBER',
+       'Committee Size - AUDIT COMMITTEE SIZE',
+       'Committee Size - REMUNERATION/ COMPENSATION COMMITTEE SIZE',
+       'Committee Size - NOMINATION COMMITTEE SIZE'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Country', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker', 'Index', 'Sector', 'Director Type', 'DirectorID*', 'Individual Name', 'Characteristics of Roles - Individual Role', 'Characteristics of Roles - Director Network Size', 'Characteristics of Roles - Time to Retirement', 'Characteristics of Roles - Time in Role', 'Characteristics of Roles - Time on Board', 'Characteristics of Roles - Time in Company', 'Director Experience - Total Number of Quoted Boards to Date', 'Director Experience - Total Number of Private Boards to Date', 'Director Experience - Total Number of Other Boards to Date', 'Director Experience - Total Number of Quoted Current Boards', 'Director Experience - Total Number of Private Current Boards', 'Director Experience - Total Number of Other Current Boards', 'Director Experience - Avg. Yrs on Other Quoted Boards', 'Director Experience - Age (Yrs)', 'Director Experience - Number of Qualifications', 'Director Experience - Gender', 'Director Experience - Nationality Mix', 'Ratios - Bonus/ (Bonus&Salary)', 'Ratios - Equity Linked/ Total', 'Ratios - Performance/ Total', 'Ratios - %Change from Last Period', 'Ratios - Wealth Delta', 'Annual Direct Compensation - Salary', 'Annual Direct Compensation - Bonus', 'Annual Direct Compensation - D.C Pension', 'Annual Direct Compensation - Other', 'Annual Direct Compensation - Total Salary+Bonus', 'Annual Direct Compensation - Total Inc. D.C. Pension & Other', 'Annual- Equity Linked Options - Shares', 'Annual- Equity Linked Options - LTIPS(max)', 'Annual- Equity Linked Options - Vesting Date', 'Annual- Equity Linked Options - Intrinsic Options (excercisable)', 'Annual- Equity Linked Options - Intrinsic Options (unexercisable)', 'Annual- Equity Linked Options - Estimated Options (exercisable)', 'Annual- Equity Linked Options - Estimated Options (unexcercisable)', 'Annual- Equity Linked Options - Share Price', 'Annual- Equity Linked Options - Total Equity Linked Compensation', 'Total - Total Annual Compensation', 'Accumulated Wealth - Shares', 'Accumulated Wealth - LTIPS(max)', 'Accumulated Wealth - Intrinsic Option', 'Accumulated Wealth - Estimated Option', 'Accumulated Wealth - Liquid Wealth', 'Total Wealth - Total Wealth']
+df.shape: (153215, 55)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (34171, 55)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Org Summary - 2.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Director Profile - Education & Achievements.xlsx
+Unique workbook name: Director Profile - Education & Achievements
+List of sheets to open: ['Education', 'Achievements']
+------
+Sheet 0 : Education
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (172825, 9)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'InstitutionID*',
+       'Institution Name', 'Company Type', 'Qualification',
+       'Qualification Description', 'Qualification Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'InstitutionID*', 'Institution Name', 'Company Type', 'Qualification', 'Qualification Description', 'Qualification Date']
+df.shape: (172825, 9)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (172825, 9)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Education & Achievements_Education.xlsx
+Done!
+------
+Sheet 1 : Achievements
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (54292, 7)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'OrganisationID*',
+       'OrganisationName', 'Achievement Date', 'Award/Achievement'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'OrganisationID*', 'OrganisationName', 'Achievement Date', 'Award/Achievement']
+df.shape: (54292, 7)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (54292, 7)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Director Profile - Education & Achievements_Achievements.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Other Activities.xlsx
+Unique workbook name: SMDEs Profile - Other Activities
+List of sheets to open: ['Current Other Activities Tab']
+------
+Sheet 0 : Current Other Activities Tab
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (48280, 8)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Role', 'Role Description', 'Start Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*']
+df.shape: (48280, 4)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (0, 4)
+Note: df has no rows and/or columns!
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Committee Details.xlsx
+Unique workbook name: SMDEs Committee Details
+List of sheets to open: [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 'Current']
+------
+Sheet 0 : 1999
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (0, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (0, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (0, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 1 : 2000
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (19, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (19, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (19, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 2 : 2001
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (20, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (20, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (20, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 3 : 2002
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (20, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (20, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (20, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 4 : 2003
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (20, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (20, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (20, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 5 : 2004
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (25, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (25, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (25, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 6 : 2005
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (34, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (34, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (34, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 7 : 2006
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (32, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (32, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (32, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 8 : 2007
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (43, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (43, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (43, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 9 : 2008
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (24, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (24, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (24, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 10 : 2009
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (34, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (34, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (34, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 11 : 2010
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (33, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (33, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (33, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 12 : 2011
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (37, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (37, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (37, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 13 : 2012
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (61, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (61, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (61, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 14 : 2013
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (99, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (99, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (99, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 15 : 2014
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (56, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (56, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (56, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 16 : 2015
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (12, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (12, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (12, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 17 : 2016
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (14, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (14, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (14, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 18 : 2017
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (18, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (18, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (18, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 19 : 2018
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (6, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (6, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (6, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 20 : 2019
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (2, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (2, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (2, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 21 : 2020
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (3, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (3, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (3, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 22 : 2021
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (0, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): []
+df.shape: (0, 0)
+Done!
+---
+Filtering df by rows:
+---
+No column found that contains 'companyid', not filtering by rows.
+df.shape: (0, 0)
+Note: df has no rows and/or columns!
+Done!
+------
+Sheet 23 : Current
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (3, 19)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name', 'Director Type']
+df.shape: (3, 11)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (2, 11)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Committee Details_Current.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Profile - Employment Historical NonBoard - 2.xlsx
+Unique workbook name: SMDEs Profile - Employment Historical NonBoard
+List of sheets to open: ['Historic Non Board Role']
+------
+Sheet 0 : Historic Non Board Role
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (141461, 15)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name',
+       'Company ISIN', 'Company Ticker', 'Company Index', 'Sector Name',
+       'Company Type', 'Role', 'Role Description', 'ED/NED/SM', 'Start Date',
+       'End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Country', 'DirectorID*', 'Director Name', 'CompanyID*', 'Company Name', 'Company ISIN', 'Company Ticker', 'Company Index']
+df.shape: (141461, 8)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (19684, 8)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Profile - Employment Historical NonBoard - 2.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 1999.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (0, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (0, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (0, 16)
+Note: df has no rows and/or columns!
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2000.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (147, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (147, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (61, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2000.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - Current.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (946, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (946, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (126, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - Current.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2015.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (1148, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (1148, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (154, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2015.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2017.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (67, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (67, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (19, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2017.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2005.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (634, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (634, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (90, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2005.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2004.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (412, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (412, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (84, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2004.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2013.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (249, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (249, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (33, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2013.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2016.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (79, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (79, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (19, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2016.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2012.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (1172, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (1172, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (155, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2012.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2005.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (75, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (75, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (22, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2005.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2009.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (90, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (90, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (16, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2009.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2021.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (0, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (0, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (0, 16)
+Note: df has no rows and/or columns!
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2003.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (284, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (284, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (82, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2003.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2000.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (14, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (14, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (7, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2000.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2011.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (164, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (164, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (21, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2011.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2019.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (987, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (987, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (123, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2019.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2015.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (68, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (68, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (21, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2015.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2001.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (170, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (170, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (58, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2001.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Compensation - 2008.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (1116, 16)
+---
+Filtering df by columns:
+---
+/home/jasonjia/.local/lib/python3.8/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Conditional Formatting extension is not supported and will be removed
+  warn(msg)
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (1116, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (157, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Compensation - 2008.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - SMDEs Compensation - 2003.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (30, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (30, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (13, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - SMDEs Compensation - 2003.xlsx
+Done!
+-----------------------------------------------------------
+List of files kept: ['ROW - SMDEs Mapping File.xlsx', 'ROW - Board Summary - 2.xlsx', 'ROW - SMDEs Profile - Employment Historical Board.xlsx', 'ROW - Director Profile - Employment Current Board.xlsx', 'ROW - Board Summary - 1.xlsx', 'ROW - Director Profile - Employment Historical Board - 2.xlsx', 'ROW - SMDEs Profile - Characteristics - 2.xlsx', 'ROW - Director Profile - Other Activities.xlsx', 'ROW - Org Analysis Averages.xlsx', 'ROW - Committee Details.xlsx', 'ROW - Director Details Mapping File.xlsx', 'ROW - SMDEs Company Announcements.xlsx', 'ROW - Director Profile - Employment Historical Board - 1.xlsx', 'ROW - SMDEs Profile - Education & Achievements.xlsx', 'ROW - Director Profile - Characteristics.xlsx', 'ROW - Director Profile - Employment Historical NonBoard.xlsx', 'ROW - SMDEs Profile - Employment Current NonBoard.xlsx', 'ROW - SMDEs Profile - Employment Historical NonBoard - 1.xlsx', 'ROW - Company Details.xlsx', 'ROW - Director Profile - Employment Current NonBoard.xlsx', 'ROW - SMDEs Profile - Employment Current Board.xlsx', 'ROW - SMDEs Org Summary - 1.xlsx', 'ROW - Company Announcements.xlsx', 'ROW - SMDEs Profile - Characteristics - 1.xlsx', 'ROW - SMDEs Org Summary - 2.xlsx', 'ROW - Director Profile - Education & Achievements.xlsx', 'ROW - SMDEs Profile - Other Activities.xlsx', 'ROW - SMDEs Committee Details.xlsx', 'ROW - SMDEs Profile - Employment Historical NonBoard - 2.xlsx', 'ROW - SMDEs Compensation - 1999.xlsx', 'ROW - Compensation - 2000.xlsx', 'ROW - Compensation - Current.xlsx', 'ROW - Compensation - 2015.xlsx', 'ROW - SMDEs Compensation - 2017.xlsx', 'ROW - Compensation - 2005.xlsx', 'ROW - Compensation - 2004.xlsx', 'ROW - SMDEs Compensation - 2013.xlsx', 'ROW - SMDEs Compensation - 2016.xlsx', 'ROW - Compensation - 2012.xlsx', 'ROW - SMDEs Compensation - 2005.xlsx', 'ROW - SMDEs Compensation - 2009.xlsx', 'ROW - SMDEs Compensation - 2021.xlsx', 'ROW - Compensation - 2003.xlsx', 'ROW - SMDEs Compensation - 2000.xlsx', 'ROW - SMDEs Compensation - 2011.xlsx', 'ROW - Compensation - 2019.xlsx', 'ROW - SMDEs Compensation - 2015.xlsx', 'ROW - Compensation - 2001.xlsx', 'ROW - Compensation - 2008.xlsx', 'ROW - SMDEs Compensation - 2003.xlsx']
+------
+List of files not kept: []
+Done!

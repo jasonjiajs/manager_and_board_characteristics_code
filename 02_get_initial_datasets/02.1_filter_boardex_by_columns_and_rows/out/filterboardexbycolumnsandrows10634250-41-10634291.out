@@ -1,0 +1,1382 @@
+-----------------------------------------------------------
+Output from Shell Script:
+Job ID: 10634291
+Job User: jasonjia
+Num Cores: 1
+Array(Task ID): 41 of 64
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: openpyxl in /home/jasonjia/.local/lib/python3.8/site-packages (3.1.2)
+Requirement already satisfied: et-xmlfile in /home/jasonjia/.local/lib/python3.8/site-packages (from openpyxl) (1.1.0)
+
+[notice] A new release of pip is available: 23.0.1 -> 23.1.2
+[notice] To update, run: pip install --upgrade pip
+Program Path: filter_boardex_by_columns_and_rows.py
+Filepath of .xslx containing list of columns in Boardex and ExecuComp: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_colstokeep/List_of_Variables_for_Boardex_and_Execucomp_010523.xlsx
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Input Folder: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex
+Output Folder: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows
+-----------------------------------------------------------
+Output from Python Script:
+This is array 41 / 64
+Filepath of .xslx containing list of columns in Boardex and ExecuComp: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_colstokeep/List_of_Variables_for_Boardex_and_Execucomp_010523.xlsx
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Input Folder (containing raw BoardEx .xlsx files): /project/kh_mercury_1/manager_and_board_characteristics/data/boardex
+Output Folder (after we filter by both columns and rows): /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows
+Total number of files in input folder: 3246
+This process will cover file(s): 2001 to 2050
+-----------------------------------------------------------
+File name (kept): ROW - Company Network - 5.xlsx
+Unique workbook name: Company Network
+List of sheets to open: ['Company Network']
+------
+Sheet 0 : Company Network
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (499552, 26)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Start Company', 'Start CompanyID*', 'Start Company Index',
+       'Start Company Sector', 'Start Company Country', 'Start Company Type',
+       'Connected Company', 'Connected CompanyID*', 'Connected Company Index',
+       'Connected Company Sector', 'Connected Company Country',
+       'Connected Company Type', 'Director Name', 'DirectorID*',
+       'Connected Company Current/Historic', 'Connected Company Duration',
+       'Connected Company Role Name', 'ED/NED/Non-Brd',
+       'Connected Company Role Start Date', 'Connected Company Role End Date',
+       'Start Company Current/Historic', 'Start Company Duration',
+       'Start Company Role', 'Start ED/NED/Non-Brd',
+       'Start Company Role Start Date', 'Start Company Role End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Start Company', 'Start CompanyID*', 'Start Company Index', 'Start Company Sector', 'Start Company Country', 'Start Company Type', 'Connected Company', 'Connected CompanyID*', 'Connected Company Index', 'Connected Company Sector', 'Connected Company Country', 'Connected Company Type', 'Director Name', 'DirectorID*', 'Connected Company Current/Historic', 'Connected Company Duration', 'Connected Company Role Name', 'ED/NED/Non-Brd', 'Connected Company Role Start Date', 'Connected Company Role End Date', 'Start Company Current/Historic', 'Start Company Duration', 'Start Company Role', 'Start ED/NED/Non-Brd', 'Start Company Role Start Date', 'Start Company Role End Date']
+df.shape: (499552, 26)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (102688, 26)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Network - 5.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Network - 9.xlsx
+Unique workbook name: Company Network
+List of sheets to open: ['Company Network']
+------
+Sheet 0 : Company Network
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (494117, 26)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Start Company', 'Start CompanyID*', 'Start Company Index',
+       'Start Company Sector', 'Start Company Country', 'Start Company Type',
+       'Connected Company', 'Connected CompanyID*', 'Connected Company Index',
+       'Connected Company Sector', 'Connected Company Country',
+       'Connected Company Type', 'Director Name', 'DirectorID*',
+       'Connected Company Current/Historic', 'Connected Company Duration',
+       'Connected Company Role Name', 'ED/NED/Non-Brd',
+       'Connected Company Role Start Date', 'Connected Company Role End Date',
+       'Start Company Current/Historic', 'Start Company Duration',
+       'Start Company Role', 'Start ED/NED/Non-Brd',
+       'Start Company Role Start Date', 'Start Company Role End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Start Company', 'Start CompanyID*', 'Start Company Index', 'Start Company Sector', 'Start Company Country', 'Start Company Type', 'Connected Company', 'Connected CompanyID*', 'Connected Company Index', 'Connected Company Sector', 'Connected Company Country', 'Connected Company Type', 'Director Name', 'DirectorID*', 'Connected Company Current/Historic', 'Connected Company Duration', 'Connected Company Role Name', 'ED/NED/Non-Brd', 'Connected Company Role Start Date', 'Connected Company Role End Date', 'Start Company Current/Historic', 'Start Company Duration', 'Start Company Role', 'Start ED/NED/Non-Brd', 'Start Company Role Start Date', 'Start Company Role End Date']
+df.shape: (494117, 26)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (124369, 26)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Network - 9.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Network - 12.xlsx
+Unique workbook name: Company Network
+List of sheets to open: ['Company Network']
+------
+Sheet 0 : Company Network
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (499477, 26)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Start Company', 'Start CompanyID*', 'Start Company Index',
+       'Start Company Sector', 'Start Company Country', 'Start Company Type',
+       'Connected Company', 'Connected CompanyID*', 'Connected Company Index',
+       'Connected Company Sector', 'Connected Company Country',
+       'Connected Company Type', 'Director Name', 'DirectorID*',
+       'Connected Company Current/Historic', 'Connected Company Duration',
+       'Connected Company Role Name', 'ED/NED/Non-Brd',
+       'Connected Company Role Start Date', 'Connected Company Role End Date',
+       'Start Company Current/Historic', 'Start Company Duration',
+       'Start Company Role', 'Start ED/NED/Non-Brd',
+       'Start Company Role Start Date', 'Start Company Role End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Start Company', 'Start CompanyID*', 'Start Company Index', 'Start Company Sector', 'Start Company Country', 'Start Company Type', 'Connected Company', 'Connected CompanyID*', 'Connected Company Index', 'Connected Company Sector', 'Connected Company Country', 'Connected Company Type', 'Director Name', 'DirectorID*', 'Connected Company Current/Historic', 'Connected Company Duration', 'Connected Company Role Name', 'ED/NED/Non-Brd', 'Connected Company Role Start Date', 'Connected Company Role End Date', 'Start Company Current/Historic', 'Start Company Duration', 'Start Company Role', 'Start ED/NED/Non-Brd', 'Start Company Role Start Date', 'Start Company Role End Date']
+df.shape: (499477, 26)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (34682, 26)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Network - 12.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Network - 1.xlsx
+Unique workbook name: Company Network
+List of sheets to open: ['Company Network']
+------
+Sheet 0 : Company Network
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (497520, 26)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Start Company', 'Start CompanyID*', 'Start Company Index',
+       'Start Company Sector', 'Start Company Country', 'Start Company Type',
+       'Connected Company', 'Connected CompanyID*', 'Connected Company Index',
+       'Connected Company Sector', 'Connected Company Country',
+       'Connected Company Type', 'Director Name', 'DirectorID*',
+       'Connected Company Current/Historic', 'Connected Company Duration',
+       'Connected Company Role Name', 'ED/NED/Non-Brd',
+       'Connected Company Role Start Date', 'Connected Company Role End Date',
+       'Start Company Current/Historic', 'Start Company Duration',
+       'Start Company Role', 'Start ED/NED/Non-Brd',
+       'Start Company Role Start Date', 'Start Company Role End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Start Company', 'Start CompanyID*', 'Start Company Index', 'Start Company Sector', 'Start Company Country', 'Start Company Type', 'Connected Company', 'Connected CompanyID*', 'Connected Company Index', 'Connected Company Sector', 'Connected Company Country', 'Connected Company Type', 'Director Name', 'DirectorID*', 'Connected Company Current/Historic', 'Connected Company Duration', 'Connected Company Role Name', 'ED/NED/Non-Brd', 'Connected Company Role Start Date', 'Connected Company Role End Date', 'Start Company Current/Historic', 'Start Company Duration', 'Start Company Role', 'Start ED/NED/Non-Brd', 'Start Company Role Start Date', 'Start Company Role End Date']
+df.shape: (497520, 26)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (112624, 26)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Network - 1.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Network - 11.xlsx
+Unique workbook name: Company Network
+List of sheets to open: ['Company Network']
+------
+Sheet 0 : Company Network
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (15242, 26)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Start Company', 'Start CompanyID*', 'Start Company Index',
+       'Start Company Sector', 'Start Company Country', 'Start Company Type',
+       'Connected Company', 'Connected CompanyID*', 'Connected Company Index',
+       'Connected Company Sector', 'Connected Company Country',
+       'Connected Company Type', 'Director Name', 'DirectorID*',
+       'Connected Company Current/Historic', 'Connected Company Duration',
+       'Connected Company Role Name', 'ED/NED/Non-Brd',
+       'Connected Company Role Start Date', 'Connected Company Role End Date',
+       'Start Company Current/Historic', 'Start Company Duration',
+       'Start Company Role', 'Start ED/NED/Non-Brd',
+       'Start Company Role Start Date', 'Start Company Role End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Start Company', 'Start CompanyID*', 'Start Company Index', 'Start Company Sector', 'Start Company Country', 'Start Company Type', 'Connected Company', 'Connected CompanyID*', 'Connected Company Index', 'Connected Company Sector', 'Connected Company Country', 'Connected Company Type', 'Director Name', 'DirectorID*', 'Connected Company Current/Historic', 'Connected Company Duration', 'Connected Company Role Name', 'ED/NED/Non-Brd', 'Connected Company Role Start Date', 'Connected Company Role End Date', 'Start Company Current/Historic', 'Start Company Duration', 'Start Company Role', 'Start ED/NED/Non-Brd', 'Start Company Role Start Date', 'Start Company Role End Date']
+df.shape: (15242, 26)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (0, 26)
+Note: df has no rows and/or columns!
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Network - 15.xlsx
+Unique workbook name: Company Network
+List of sheets to open: ['Company Network']
+------
+Sheet 0 : Company Network
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (206550, 26)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Start Company', 'Start CompanyID*', 'Start Company Index',
+       'Start Company Sector', 'Start Company Country', 'Start Company Type',
+       'Connected Company', 'Connected CompanyID*', 'Connected Company Index',
+       'Connected Company Sector', 'Connected Company Country',
+       'Connected Company Type', 'Director Name', 'DirectorID*',
+       'Connected Company Current/Historic', 'Connected Company Duration',
+       'Connected Company Role Name', 'ED/NED/Non-Brd',
+       'Connected Company Role Start Date', 'Connected Company Role End Date',
+       'Start Company Current/Historic', 'Start Company Duration',
+       'Start Company Role', 'Start ED/NED/Non-Brd',
+       'Start Company Role Start Date', 'Start Company Role End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Start Company', 'Start CompanyID*', 'Start Company Index', 'Start Company Sector', 'Start Company Country', 'Start Company Type', 'Connected Company', 'Connected CompanyID*', 'Connected Company Index', 'Connected Company Sector', 'Connected Company Country', 'Connected Company Type', 'Director Name', 'DirectorID*', 'Connected Company Current/Historic', 'Connected Company Duration', 'Connected Company Role Name', 'ED/NED/Non-Brd', 'Connected Company Role Start Date', 'Connected Company Role End Date', 'Start Company Current/Historic', 'Start Company Duration', 'Start Company Role', 'Start ED/NED/Non-Brd', 'Start Company Role Start Date', 'Start Company Role End Date']
+df.shape: (206550, 26)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (9911, 26)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Network - 15.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): ROW - Company Network - 3.xlsx
+Unique workbook name: Company Network
+List of sheets to open: ['Company Network']
+------
+Sheet 0 : Company Network
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (499570, 26)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Start Company', 'Start CompanyID*', 'Start Company Index',
+       'Start Company Sector', 'Start Company Country', 'Start Company Type',
+       'Connected Company', 'Connected CompanyID*', 'Connected Company Index',
+       'Connected Company Sector', 'Connected Company Country',
+       'Connected Company Type', 'Director Name', 'DirectorID*',
+       'Connected Company Current/Historic', 'Connected Company Duration',
+       'Connected Company Role Name', 'ED/NED/Non-Brd',
+       'Connected Company Role Start Date', 'Connected Company Role End Date',
+       'Start Company Current/Historic', 'Start Company Duration',
+       'Start Company Role', 'Start ED/NED/Non-Brd',
+       'Start Company Role Start Date', 'Start Company Role End Date'],
+      dtype='object')
+List of cols to keep (after processing): ['Start Company', 'Start CompanyID*', 'Start Company Index', 'Start Company Sector', 'Start Company Country', 'Start Company Type', 'Connected Company', 'Connected CompanyID*', 'Connected Company Index', 'Connected Company Sector', 'Connected Company Country', 'Connected Company Type', 'Director Name', 'DirectorID*', 'Connected Company Current/Historic', 'Connected Company Duration', 'Connected Company Role Name', 'ED/NED/Non-Brd', 'Connected Company Role Start Date', 'Connected Company Role End Date', 'Start Company Current/Historic', 'Start Company Duration', 'Start Company Role', 'Start ED/NED/Non-Brd', 'Start Company Role Start Date', 'Start Company Role End Date']
+df.shape: (499570, 26)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (95193, 26)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/ROW - Company Network - 3.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2006.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5736, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (5736, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1727, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2006.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2008.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (266, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (266, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (142, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2008.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2012.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (191, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (191, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (117, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2012.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2021.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (0, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (0, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (0, 16)
+Note: df has no rows and/or columns!
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2009.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4762, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4762, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1795, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2009.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2003.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5230, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (5230, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1642, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2003.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2016.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (164, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (164, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (95, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2016.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2008.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5473, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (5473, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1833, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2008.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2017.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (112, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (112, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (71, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2017.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 1999.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (14, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (14, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (11, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 1999.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2011.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4275, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4275, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1779, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2011.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2018.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (103, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (103, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (72, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2018.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2017.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4173, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4173, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1922, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2017.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2015.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4211, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4211, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1901, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2015.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2013.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (170, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (170, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (104, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2013.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2015.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (160, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (160, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (101, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2015.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2020.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (2274, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (2274, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1164, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2020.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 1999.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (2917, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (2917, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1217, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 1999.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2011.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (182, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (182, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (127, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2011.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2018.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4078, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4078, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1896, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2018.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2005.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (289, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (289, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (122, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2005.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2009.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (212, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (212, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (141, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2009.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2019.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (102, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (102, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (77, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2019.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2005.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5737, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (5737, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1710, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2005.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2020.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (35, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (35, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (35, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2020.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2001.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4800, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4800, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1692, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2001.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2006.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (310, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (310, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (127, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2006.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2001.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (101, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (101, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (60, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2001.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2000.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (74, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (74, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (45, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2000.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2012.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4228, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4228, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1788, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2012.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - Current.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (84, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (84, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (65, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - Current.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2010.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (175, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (175, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (109, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2010.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2014.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (134, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (134, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (87, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2014.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2014.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4188, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4188, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1820, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2014.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2002.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (138, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (138, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (75, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2002.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2002.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5039, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (5039, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1655, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2002.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2016.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4217, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4217, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1917, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2016.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - SMDEs Compensation - 2003.xlsx
+Unique workbook name: SMDEs Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (197, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (197, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (92, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - SMDEs Compensation - 2003.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2019.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4031, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4031, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1932, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2019.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2007.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5864, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (5864, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1789, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2007.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2004.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (5224, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (5224, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1649, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2004.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - 2010.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (4436, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (4436, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1763, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - 2010.xlsx
+Done!
+-----------------------------------------------------------
+File name (kept): Europe - Compensation - Current.xlsx
+Unique workbook name: Compensation
+List of sheets to open: ['Summary']
+------
+Sheet 0 : Summary
+% NaNs in first row 0.0 <= 30%, taking header = row 0 as usual
+df.shape: (3904, 16)
+---
+Filtering df by columns:
+---
+df.columns (after processing): Index(['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*',
+/home/jasonjia/.local/lib/python3.8/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Conditional Formatting extension is not supported and will be removed
+  warn(msg)
+       'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked',
+       'Total Compensation', 'Total Wealth'],
+      dtype='object')
+List of cols to keep (after processing): ['Annual Report Year', 'Company Name', 'CompanyID*', 'ISIN', 'Ticker', 'Index', 'Sector', 'Country', 'Director Name', 'DirectorID*', 'Director Role', 'ED/SD', 'Direct Compensation', 'Equity Linked', 'Total Compensation', 'Total Wealth']
+df.shape: (3904, 16)
+Done!
+---
+Filtering df by rows:
+---
+Found column that contains 'companyid', filtering by rows.
+df.shape: (1926, 16)
+df saved to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/02.1_boardex_filtered_by_columns_and_rows/Europe - Compensation - Current.xlsx
+Done!
+-----------------------------------------------------------
+List of files kept: ['ROW - Company Network - 5.xlsx', 'ROW - Company Network - 9.xlsx', 'ROW - Company Network - 12.xlsx', 'ROW - Company Network - 1.xlsx', 'ROW - Company Network - 11.xlsx', 'ROW - Company Network - 15.xlsx', 'ROW - Company Network - 3.xlsx', 'Europe - Compensation - 2006.xlsx', 'Europe - SMDEs Compensation - 2008.xlsx', 'Europe - SMDEs Compensation - 2012.xlsx', 'Europe - SMDEs Compensation - 2021.xlsx', 'Europe - Compensation - 2009.xlsx', 'Europe - Compensation - 2003.xlsx', 'Europe - SMDEs Compensation - 2016.xlsx', 'Europe - Compensation - 2008.xlsx', 'Europe - SMDEs Compensation - 2017.xlsx', 'Europe - SMDEs Compensation - 1999.xlsx', 'Europe - Compensation - 2011.xlsx', 'Europe - SMDEs Compensation - 2018.xlsx', 'Europe - Compensation - 2017.xlsx', 'Europe - Compensation - 2015.xlsx', 'Europe - SMDEs Compensation - 2013.xlsx', 'Europe - SMDEs Compensation - 2015.xlsx', 'Europe - Compensation - 2020.xlsx', 'Europe - Compensation - 1999.xlsx', 'Europe - SMDEs Compensation - 2011.xlsx', 'Europe - Compensation - 2018.xlsx', 'Europe - SMDEs Compensation - 2005.xlsx', 'Europe - SMDEs Compensation - 2009.xlsx', 'Europe - SMDEs Compensation - 2019.xlsx', 'Europe - Compensation - 2005.xlsx', 'Europe - SMDEs Compensation - 2020.xlsx', 'Europe - Compensation - 2001.xlsx', 'Europe - SMDEs Compensation - 2006.xlsx', 'Europe - SMDEs Compensation - 2001.xlsx', 'Europe - SMDEs Compensation - 2000.xlsx', 'Europe - Compensation - 2012.xlsx', 'Europe - SMDEs Compensation - Current.xlsx', 'Europe - SMDEs Compensation - 2010.xlsx', 'Europe - SMDEs Compensation - 2014.xlsx', 'Europe - Compensation - 2014.xlsx', 'Europe - SMDEs Compensation - 2002.xlsx', 'Europe - Compensation - 2002.xlsx', 'Europe - Compensation - 2016.xlsx', 'Europe - SMDEs Compensation - 2003.xlsx', 'Europe - Compensation - 2019.xlsx', 'Europe - Compensation - 2007.xlsx', 'Europe - Compensation - 2004.xlsx', 'Europe - Compensation - 2010.xlsx', 'Europe - Compensation - Current.xlsx']
+------
+List of files not kept: []
+Done!

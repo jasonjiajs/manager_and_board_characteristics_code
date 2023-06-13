@@ -1,0 +1,49 @@
+-------------------------------------------
+Job ID: 10633463
+Job User: jasonjia
+Num Cores: 8
+Array(Task ID): 4 of 8
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: openpyxl in /home/jasonjia/.local/lib/python3.8/site-packages (3.1.2)
+Requirement already satisfied: et-xmlfile in /home/jasonjia/.local/lib/python3.8/site-packages (from openpyxl) (1.1.0)
+
+[notice] A new release of pip is available: 23.0.1 -> 23.1.2
+[notice] To update, run: pip install --upgrade pip
+Program Path: filter_data_by_rows.py
+Input Directory: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/row_smallfiles
+Output Directory: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+-------------------------------------------
+This is array 4 / 8
+Input Dir: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/row_smallfiles
+Output Dir: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows
+Filepath to list of company IDs we want to filter by: /project/kh_mercury_1/manager_and_board_characteristics/output/01_convert_isins_and_gvkeys_to_boardex_companyids/companyids_to_search_for/companyids_to_search_for.xlsx
+Total number of files: 29
+This process will cover file(s): 10 to 12
+-------------------------------------------
+Filepath: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/row_smallfiles/ROW - Committee Details.xlsx
+% NaNs in first row 0.0 <= 50%, taking header = row 0 as usual
+df.columns: Index(['Annual Report Year', 'CompanyID*', 'Company Name', 'ISIN', 'Ticker',
+       'Index', 'Sector', 'Country', 'DirectorID*', 'Director Name',
+       'Director Type (ED or SD)', 'Committee Name', 'Committee Role',
+       'Functional Experience', 'Board Role', 'Board Position(Yes/No)',
+       'Other Like Committees', 'Other Board Name', 'Director Role Status'],
+      dtype='object')
+Shape of filtered df: (21, 19)
+Saved filtered df to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows/ROW - Committee Details_filtered.xlsx
+-------------------------------------------
+Filepath: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/row_smallfiles/ROW - Director Details Mapping File.xlsx
+% NaNs in first row 0.0 <= 50%, taking header = row 0 as usual
+df.columns: Index(['Bex Dir ID', 'DirectorID*', 'Director Name'], dtype='object')
+No column found that contains 'companyid', skipping df
+-------------------------------------------
+Filepath: /project/kh_mercury_1/manager_and_board_characteristics/data/boardex/row_smallfiles/ROW - SMDEs Company Announcements.xlsx
+% NaNs in first row 0.0 <= 50%, taking header = row 0 as usual
+df.columns: Index(['Announcement Date', 'Effective Date', 'CompanyID*', 'Company Name',
+       'ISIN', 'DirectorID*', 'Director Name', 'Gender', 'Role',
+       'Description'],
+      dtype='object')
+Shape of filtered df: (4428, 10)
+Saved filtered df to: /project/kh_mercury_1/manager_and_board_characteristics/output/02_get_initial_datasets/output_filtered_by_rows/ROW - SMDEs Company Announcements_filtered.xlsx
+-------------------------------------------
+Done!
