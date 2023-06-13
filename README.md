@@ -1,5 +1,5 @@
 # manager_and_board_characteristics_code
-Process Boardex files to get a relevant manager-level and firm-level dataset.
+Process Boardex files to get a relevant firm-level dataset.
 
 ## Manager-level dataset documentation
 - Level of aggregation: (Year x Company ID)
