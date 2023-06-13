@@ -6,7 +6,7 @@ Process Boardex files to get a relevant manager-level and firm-level dataset.
 - We start with a (Year x Company ID x Director) - level dataset, then we aggregate across directors to get a (Year x Company ID) - level dataset.
 - Initial identifiers:
   - ['Year',	'CompanyID*',	'Company Name',	'Sector', 'Country',	'ISIN',	'region']
-- Quantitative variables are aggregated by taking the mean across directors for each (Year x Company ID) pair. NaN values occur when every director in that (Year x Company ID) pair has a NaN value
+- Quantitative variables are aggregated by taking the mean across directors for each (Year x Company ID) pair. NaN values occur when every director in that (Year x Company ID) pair has a NaN value.
   - Variables: ['Characteristics of Roles - Director Network Size', 'Characteristics of Roles - Time to Retirement', 
                  'Characteristics of Roles - Time in Role', 'Characteristics of Roles - Time on Board', 
                  'Characteristics of Roles - Time in Company',
