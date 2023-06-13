@@ -1,7 +1,7 @@
 # manager_and_board_characteristics_code
-Process Boardex and Execucomp files to get a relevant manager-level and firm-level dataset.
+Process Boardex files to get a relevant manager-level and firm-level dataset.
 
-Output:
+## Manager-level dataset documentation
 - Level of aggregation: (Year x Company ID)
 - We start with a (Year x Company ID x Director) - level dataset, then we aggregate across directors to get a (Year x Company ID) - level dataset.
 - Initial identifiers:
