@@ -33,8 +33,9 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Ratios - Bonus/ (Bonus&Salary)': Ratio of bonus earned to bonus plus salary earned at a selected Annual Report Date
     - 'Ratios - Equity Linked/ Total': Ratio of equity linked compensation earned to total compensation earned at a selected Annual Report Date
     - 'Ratios - Performance/ Total': Ratio of performance based compensation earned to total compensation earned at a selected Annual Report Date
-    - 'Ratios - %Change from Last Period': Percentage change of performance to total ratio over the same ratio from the previous annual report year (not included in dataset)
     - 'Ratios - Wealth Delta': Change in the individual’s wealth in the company for each 1% change in the stock price
+      - Not in dataset:
+        - 'Ratios - %Change from Last Period': Percentage change of performance to total ratio over the same ratio from the previous annual report year  
   - Director Count Totals Variables:
     - 'Director Count Totals - Number of Independent NED with past CFO/FD role'
   - Compensation Variables: 
@@ -44,7 +45,8 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Annual Direct Compensation - Other'
     - 'Annual Direct Compensation - Total Salary+Bonus'
     - 'Annual Direct Compensation - Total Inc. D.C. Pension & Other'
-    - 'Annual- Equity Linked Options - Shares', 'Annual- Equity Linked Options - LTIPS(max)'
+    - 'Annual- Equity Linked Options - Shares'
+    - 'Annual- Equity Linked Options - LTIPS(max)'
     - 'Annual- Equity Linked Options - Intrinsic Options (excercisable)'
     - 'Annual- Equity Linked Options - Intrinsic Options (unexercisable)'
     - 'Annual- Equity Linked Options - Estimated Options (unexcercisable)'
@@ -59,7 +61,7 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Accumulated Wealth - Liquid Wealth'
     - 'Total Wealth - Total Wealth'
   - Education Variables:
-    - 'Bachelors' (This is originally an indicator variable that returns 1 if the director has at least one Bachelor's degree, and 0 otherwise. So the mean is the % of directors in a (company, year) that has at least one Bachelors degree.)
+    - 'Bachelors': This is originally an indicator variable that returns 1 if the director has at least one Bachelor's degree, and 0 otherwise. So the mean is the % of directors in a (company, year) that has at least one Bachelors degree.
     - 'Masters'
     - 'MBA'
     - 'PhD'
@@ -84,7 +86,7 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'CFO - Ratios - Performance/ Total'
     - 'CFO - Ratios - Wealth Delta'
   - Education Variables:
-    - 'CEO - Highest Ranked Degree - Institution Name' (Degrees are 'ranked' in the order: PhD > MBA > Masters > Bachelors. The highest ranked degree here is the degree in the highest rank. If there are multiple degrees in the highest rank, the first row is chosen.)
+    - 'CEO - Highest Ranked Degree - Institution Name': Degrees are 'ranked' in the order: PhD > MBA > Masters > Bachelors. The highest ranked degree here is the degree in the highest rank. If there are multiple degrees in the highest rank, the first row is chosen.
     - 'CEO - Highest Ranked Degree - InstitutionID*'	
     - 'CEO - Highest Ranked Degree - Qualification'	
     - 'CEO - Highest Ranked Degree - Country'	
