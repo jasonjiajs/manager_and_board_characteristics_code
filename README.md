@@ -1,7 +1,7 @@
 # manager_and_board_characteristics_code
 Process Boardex files to get a relevant firm-level dataset.
 
-## Manager-level dataset documentation
+## Manager-level dataset overview
 - Level of aggregation: (Year x Company ID)
 - We start with a (Year x Company ID x Director) - level dataset, then we aggregate across directors to get a (Year x Company ID) - level dataset.
 - Initial identifiers:
@@ -12,7 +12,7 @@ Process Boardex files to get a relevant firm-level dataset.
   - 'Country'
   - 'ISIN'
   - 'region'
-- Quantitative variables are aggregated by taking the mean across directors for each (Year x Company ID) pair. NaN values occur when every director in that (Year x Company ID) pair has a NaN value.
+- The following quantitative variables are aggregated by taking the **mean** across directors for each (Year x Company ID) pair. NaN values occur when every director in that (Year x Company ID) pair has a NaN value.
   - Characteristics of Roles Variables: 
     - 'Characteristics of Roles - Director Network Size'
     - 'Characteristics of Roles - Time to Retirement'
@@ -29,7 +29,7 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Director Experience - Avg. Yrs on Other Quoted Boards'
     - 'Director Experience - Age (Yrs)'
     - 'Director Experience - Number of Qualifications'
-  - Ratios Variables: 
+  - Compensation Ratios Variables: 
     - 'Ratios - Bonus/ (Bonus&Salary)'
     - 'Ratios - Equity Linked/ Total'
     - 'Ratios - Performance/ Total'
@@ -58,10 +58,36 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Accumulated Wealth - Estimated Option'
     - 'Accumulated Wealth - Liquid Wealth'
     - 'Total Wealth - Total Wealth'
+  - Education Variables:
+    - 'Bachelors' (Here, the mean is the % of directors in a (company, year) that has a Bacherlors degree)
+    - 'Masters'
+    - 'MBA'
+    - 'PhD'
 - Categorical variables are aggregated by taking shares of counts across directors for each (Year x Company ID) pair. For example, the % of male and female directors in a particular (year, company).
   - Variables:
     - 'Director Experience - Gender'
     - 'Director Experience - Nationality Mix'
+- CEO and CFO-specific variables. In a few cases, there are 2 CEOs or 2 CFOs in one (company, year). For now, we choose the first one that appears in the table.
+  - Compensation Ratios Variables:
+    - 'CEO - Ratios - Bonus/ (Bonus&Salary)'	
+    - 'CEO - Ratios - Equity Linked/ Total'
+    - 'CEO - Ratios - Performance/ Total'	
+    - 'CEO - Ratios - %Change from Last Period'
+    - 'CEO - Ratios - Wealth Delta'	
+    - 'CFO - Ratios - Bonus/ (Bonus&Salary)'	
+    - 'CFO - Ratios - Equity Linked/ Total'	
+    - 'CFO - Ratios - Performance/ Total'	
+    - 'CFO - Ratios - %Change from Last Period'	
+    - 'CFO - Ratios - Wealth Delta'	
+  - Education Variables:
+    - 'CEO - Highest Ranked Degree - Institution Name' (Degrees are 'ranked' in the order: PhD > MBA > Masters > Bachelors. The highest ranked degree here is the degree in the highest rank. If there are multiple degrees in the highest rank, the first row is chosen.)
+    - 'CEO - Highest Ranked Degree - InstitutionID*'	
+    - 'CEO - Highest Ranked Degree - Qualification'	
+    - 'CEO - Highest Ranked Degree - Country'	
+    - 'CFO - Highest Ranked Degree - Institution Name'	
+    - 'CFO - Highest Ranked Degree - InstitutionID*'	
+    - 'CFO - Highest Ranked Degree - Qualification'	
+    - 'CFO - Highest Ranked Degree - Country'
 - Firm identifiers are added on by merging on Company ID.
   - Variables: 
     - 'CIK Code'
