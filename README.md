@@ -34,8 +34,6 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Ratios - Equity Linked/ Total': Ratio of equity linked compensation earned to total compensation earned at a selected Annual Report Date
     - 'Ratios - Performance/ Total': Ratio of performance based compensation earned to total compensation earned at a selected Annual Report Date
     - 'Ratios - Wealth Delta': Change in the individual’s wealth in the company for each 1% change in the stock price
-      - Not in dataset:
-        - 'Ratios - %Change from Last Period': Percentage change of performance to total ratio over the same ratio from the previous annual report year  
   - Director Count Totals Variables:
     - 'Director Count Totals - Number of Independent NED with past CFO/FD role'
   - Compensation Variables: 
@@ -106,7 +104,10 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'HOCountryName'
 
 ## Misc
-- [BoardEx variables documntation](https://wrds-www.wharton.upenn.edu/documents/798/BoardEx_WRDS_Data_Dictionary_102020.pdf) (login required)
+
+### Additional description for select variables not kept in firm-level dataset
+- Compensation Ratios Variables: 
+  - 'Ratios - %Change from Last Period': Percentage change of performance to total ratio over the same ratio from the previous annual report year  
 
 ### Nationalities
 - Countries in Europe: Albania, Andorra, Austria, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, 
@@ -129,3 +130,6 @@ Singapore, South Korea, Sri Lanka, Syria, Taiwan, Tajikistan, Thailand, Turkmeni
 'Indian', 'Indonesian', 'Iranian', 'Iraqi', 'Israeli', 'Japanese', 'Jordanian', 'Kazakhstani',
 'Kuwaiti', 'Malaysian', 'Omani', 'Pakistani', 'Qatari', 'Saudi', 'Singaporean',
 'South Korean', 'Sri Lankan', 'Syrian', 'Thai'
+
+### BoardEx variables documentation
+- [BoardEx WRDS Data Dictionary](https://wrds-www.wharton.upenn.edu/documents/798/BoardEx_WRDS_Data_Dictionary_102020.pdf) (login required)
