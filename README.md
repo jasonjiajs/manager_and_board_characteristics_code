@@ -30,11 +30,11 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Director Experience - Age (Yrs)'
     - 'Director Experience - Number of Qualifications'
   - Compensation Ratios Variables: 
-    - 'Ratios - Bonus/ (Bonus&Salary)'
-    - 'Ratios - Equity Linked/ Total'
-    - 'Ratios - Performance/ Total'
-    - 'Ratios - %Change from Last Period'
-    - 'Ratios - Wealth Delta'
+    - 'Ratios - Bonus/ (Bonus&Salary)': Ratio of bonus earned to bonus plus salary earned at a selected Annual Report Date
+    - 'Ratios - Equity Linked/ Total': Ratio of equity linked compensation earned to total compensation earned at a selected Annual Report Date
+    - 'Ratios - Performance/ Total': Ratio of performance based compensation earned to total compensation earned at a selected Annual Report Date
+    - 'Ratios - %Change from Last Period': Percentage change of performance to total ratio over the same ratio from the previous annual report year (not included in dataset)
+    - 'Ratios - Wealth Delta': Change in the individual’s wealth in the company for each 1% change in the stock price
   - Director Count Totals Variables:
     - 'Director Count Totals - Number of Independent NED with past CFO/FD role'
   - Compensation Variables: 
@@ -66,19 +66,23 @@ Process Boardex files to get a relevant firm-level dataset.
 - Categorical variables are aggregated by taking shares of counts across directors for each (Year x Company ID) pair. For example, the % of male and female directors in a particular (year, company).
   - Variables:
     - 'Director Experience - Gender'
+      - Male 
     - 'Director Experience - Nationality Mix'
+      - American
+      - Canadian
+      - British
+      - European (excludes British, includes Swiss))
+      - Asian
 - CEO and CFO-specific variables. In a few cases, there are 2 CEOs or 2 CFOs in one (company, year). For now, we choose the first one that appears in the table.
   - Compensation Ratios Variables:
-    - 'CEO - Ratios - Bonus/ (Bonus&Salary)'	
+    - 'CEO - Ratios - Bonus/ (Bonus&Salary)'
     - 'CEO - Ratios - Equity Linked/ Total'
-    - 'CEO - Ratios - Performance/ Total'	
-    - 'CEO - Ratios - %Change from Last Period'
-    - 'CEO - Ratios - Wealth Delta'	
+    - 'CEO - Ratios - Performance/ Total'
+    - 'CEO - Ratios - Wealth Delta'
     - 'CFO - Ratios - Bonus/ (Bonus&Salary)'	
-    - 'CFO - Ratios - Equity Linked/ Total'	
-    - 'CFO - Ratios - Performance/ Total'	
-    - 'CFO - Ratios - %Change from Last Period'	
-    - 'CFO - Ratios - Wealth Delta'	
+    - 'CFO - Ratios - Equity Linked/ Total'
+    - 'CFO - Ratios - Performance/ Total'
+    - 'CFO - Ratios - Wealth Delta'
   - Education Variables:
     - 'CEO - Highest Ranked Degree - Institution Name' (Degrees are 'ranked' in the order: PhD > MBA > Masters > Bachelors. The highest ranked degree here is the degree in the highest rank. If there are multiple degrees in the highest rank, the first row is chosen.)
     - 'CEO - Highest Ranked Degree - InstitutionID*'	
@@ -91,20 +95,35 @@ Process Boardex files to get a relevant firm-level dataset.
 - Firm identifiers are added on by merging on Company ID.
   - Variables: 
     - 'CIK Code'
-    - 'HOAddress2'
-    - 'HOAddress1'
-    - 'HOAddress4'
     - 'Auditors'
     - 'Latest AR'
-    - 'HO TelNumber'
     - 'Bankers'
     - 'Index'
     - 'Ticker'
-    -  'Market Cap'
-    -  'HO FaxNumber'
-    -  'HOAddress5'
-    -  'HOCountryName'
-    -  'HO URL'
-    -  'HOAddress3'
+    - 'Market Cap'
+    - 'HOCountryName'
 
+## Misc
+- [BoardEx variables documntation](https://wrds-www.wharton.upenn.edu/documents/798/BoardEx_WRDS_Data_Dictionary_102020.pdf) (login required)
 
+### Nationalities
+- Countries in Europe: Albania, Andorra, Austria, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, 
+Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Republic of Ireland, 
+Italy, Kosovo, Latvia, Liechtenstein, Lithuania, Luxembourg, North Macedonia, Malta, Moldova, Monaco, 
+Montenegro, Netherlands, Norway, Poland, Portugal, Romania, Russia, San Marino, Serbia, Slovakia, 
+Slovenia, Spain, Sweden, Switzerland, Turkey, Ukraine, Vatican City
+
+- Countries in Asia: Afghanistan, Armenia, Azerbaijan, Bahrain, Bangladesh, Bhutan, Brunei, Cambodia, China, East Timor, Georgia, India, Indonesia, Iran,
+Iraq, Israel, Japan, Jordan, Kazakhstan, Kuwait, Kyrgyzstan, Laos, Lebanon, Malaysia, The Maldives, Mongolia,
+Myanmar (Burma), Nepal, North Korea, Oman, Pakistan, Palestine, The Philippines, Qatar, Saudi Arabia,
+Singapore, South Korea, Sri Lanka, Syria, Taiwan, Tajikistan, Thailand, Turkmenistan, United Arab Emirates, Uzbekistan, Vietnam, Yemen
+
+- European nationalities in dataset: 'Austrian', 'Belarusian', 'Belgian', 'Bosnian', 'Bulgarian', 'Croatian', 'Cypriot', 'Czech', 'Danish', 
+'Dutch',  'Finnish', 'French', 'German', 'Greek', 'Hungarian', 'Icelander', 'Irish', 'Italian', 
+'Luxembourger', 'Maltese', 'Monacan', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 
+'Slovak', 'Slovene', 'Spanish', 'Swedish', 'Swiss', 'Turkish', 'Ukrainian'
+
+- Asian nationalities in dataset: 'Armenian', 'Bahraini', 'Burmese', 'Chinese', 'Chinese (Taiwan)', 'Emirian', 'Filipino', 'Georgian', 
+'Indian', 'Indonesian', 'Iranian', 'Iraqi', 'Israeli', 'Japanese', 'Jordanian', 'Kazakhstani',
+'Kuwaiti', 'Malaysian', 'Omani', 'Pakistani', 'Qatari', 'Saudi', 'Singaporean',
+'South Korean', 'Sri Lankan', 'Syrian', 'Thai'
