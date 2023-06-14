@@ -59,7 +59,7 @@ Process Boardex files to get a relevant firm-level dataset.
     - 'Accumulated Wealth - Liquid Wealth'
     - 'Total Wealth - Total Wealth'
   - Education Variables:
-    - 'Bachelors' (Here, the mean is the % of directors in a (company, year) that has a Bacherlors degree)
+    - 'Bachelors' (Here, the mean is the % of directors in a (company, year) that has a Bacherlors degree.)
     - 'Masters'
     - 'MBA'
     - 'PhD'
