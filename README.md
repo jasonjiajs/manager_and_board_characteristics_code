@@ -134,6 +134,9 @@ Singapore, South Korea, Sri Lanka, Syria, Taiwan, Tajikistan, Thailand, Turkmeni
 ### BoardEx variables documentation
 - [BoardEx WRDS Data Dictionary](https://wrds-www.wharton.upenn.edu/documents/798/BoardEx_WRDS_Data_Dictionary_102020.pdf) (login required)
 
+### Saving this .md file as a .docx
+- [Link](https://cloudconvert.com/md-to-docx)
+
 ## Folder structure
 - This repo contains the code and documentation for the Manager and Board Characteristics project. It is either saved under the folder `code` or `manager_and_board_characteristics_code`. The other folders are `data` and `output`. The full version of both folders is available in Mercury, and a subset is available in Dropbox.
 - `manager_and_board_characteristics`
