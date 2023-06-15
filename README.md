@@ -114,7 +114,8 @@ Process Boardex files to get a relevant firm-level dataset.
 
 
 ## Folder structure
-- This repo contains the code and documentation for the Manager and Board Characteristics project. It is either saved under the folder `code` or `manager_and_board_characteristics_code`. The other folders are `data` and `output`. The full version of both folders is available in Mercury, and a subset is available in Dropbox.
+- This repo contains the code and documentation for the Manager and Board Characteristics project. It is saved under the folder `code`. The other folders are `data` and `output`. The full version of both folders is available in Mercury, and a subset is available in Dropbox.
+- To save this repo in your local drive under `manager_and_board_characteristics/code`: first cd to the root folder `manager_and_board_characteristics`, then clone the repo using `git clone https://github.com/jasonjiajs/manager_and_board_characteristics_code.git code`.
 - `manager_and_board_characteristics`
   - `code`
   - `data`
