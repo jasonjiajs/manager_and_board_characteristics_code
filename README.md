@@ -103,14 +103,14 @@ Process Boardex files to get a relevant firm-level dataset.
 | CEO/CFO - Education | CFO - Highest Ranked Degree - Country | cfo_degree_country |  |
 | CEO/CFO - Characteristics of Roles | CFO - Characteristics of Roles - Time in Role | cfo_time_in_role |  |
 | CEO/CFO - Characteristics of Roles | CFO - Characteristics of Roles - Time on Board | cfo_time_on_board |  |
-| Firm identifiers | CIK Code | cik_code |  |
-| Firm identifiers | Auditors | auditors |  |
-| Firm identifiers | Latest AR | latest_ar |  |
-| Firm identifiers | Bankers | bankers |  |
-| Firm identifiers | Index | index |  |
-| Firm identifiers | Ticker | ticker |  |
-| Firm identifiers | Market Cap | market_cap |  |
-| Firm identifiers | HOCountryName | ho_country_name |
+| Firm identifiers | CIK Code | cik_code | The CIK Code used within SEC filings for American companies - relevant only for companies incorporated within the U.S. and who are required to make a filing |
+| Firm identifiers | Auditors | auditors | Organization name that provides audit services to the company |
+| Firm identifiers | Latest AR | latest_ar | Latest Annual Report date (in month-year) |
+| Firm identifiers | Bankers | bankers | Organization name that provides financial services to the company |
+| Firm identifiers | Index | index | Index classification(s) of a company according to FT index classifications |
+| Firm identifiers | Ticker | ticker | Shorthand code used to uniquely identify shares of a publicly-traded corporation on a particular stock market. |
+| Firm identifiers | Market Cap | market_cap | The total value of a company's securities at Current prices as quoted on a stock exchange. Market capitalization is calculated by multiplying the total number of shares by the market price. |
+| Firm identifiers | HOCountryName | ho_country_name | The full country name the Head Office of the Company is located in. |
 
 
 ## Folder structure
