@@ -26,58 +26,58 @@ Process Boardex files to get a relevant firm-level dataset.
 
 | Category | Original Variable Name | Stata Variable Name | Explanation |
 |---|---|---|---|
-| Initial identifiers | Year | Year |  |
-| Initial identifiers | CompanyID* | CompanyID* |  |
-| Initial identifiers | Company Name | Company Name |  |
-| Initial identifiers | Sector | Sector |  |
-| Initial identifiers | Country | Country |  |
-| Initial identifiers | ISIN | ISIN |  |
-| Characteristics of Roles | Characteristics of Roles - Director Network Size |  |  |
-| Characteristics of Roles | Characteristics of Roles - Time to Retirement |  |  |
-| Characteristics of Roles | Characteristics of Roles - Time in Role |  |  |
-| Characteristics of Roles | Characteristics of Roles - Time on Board |  |  |
-| Characteristics of Roles | Characteristics of Roles - Time in Company |  |  |
-| Director Experience | Director Experience - Total Number of Quoted Boards to Date |  |  |
-| Director Experience | Director Experience - Total Number of Private Boards to Date |  |  |
-| Director Experience | Director Experience - Total Number of Other Boards to Date |  |  |
-| Director Experience | Director Experience - Total Number of Quoted Current Boards |  |  |
-| Director Experience | Director Experience - Total Number of Private Current Boards |  |  |
-| Director Experience | Director Experience - Total Number of Other Current Boards |  |  |
-| Director Experience | Director Experience - Avg. Yrs on Other Quoted Boards |  |  |
-| Director Experience | Director Experience - Age (Yrs) |  |  |
-| Director Experience | Director Experience - Number of Qualifications |  |  |
+| Initial identifiers | Year | Year | The applicable year of the company annual report to which the rest of the shown data corresponds (just the year, not year-month) |
+| Initial identifiers | CompanyID* | CompanyID* | A unique identifier allocated to each company. |
+| Initial identifiers | Company Name | Company Name | The full company name or the FT abbreviation in the case of quoted companies. If the company name has changed this will be shown in this field. |
+| Initial identifiers | Sector | Sector | Sector classification of a company under FTSE International classification (In some cases designated by BoardEx) |
+| Initial identifiers | Country | Country | The full country name in which the Head Office of the Company is located |
+| Initial identifiers | ISIN | ISIN | An International Securities Identifying Number (ISIN) uniquely identifies a security. |
+| Characteristics of Roles | Characteristics of Roles - Director Network Size |  | The number of individual’s with whom the selected individual overlaps while in employment, other activities, or education roles at the same company, organization, or institution |
+| Characteristics of Roles | Characteristics of Roles - Time to Retirement |  | Time to Retirement for the individual at a selected Annual Report Date assuming a retirement age of 70 |
+| Characteristics of Roles | Characteristics of Roles - Time in Role |  | Time in Role for the individual at a selected Annual Report Date |
+| Characteristics of Roles | Characteristics of Roles - Time on Board |  | Time on Board for the individual at a selected Annual Report Date |
+| Characteristics of Roles | Characteristics of Roles - Time in Company |  | Time in Company for the individual at a selected Annual Report Date |
+| Director Experience | Director Experience - Total Number of Quoted Boards to Date |  | The total number of Quoted Boards that an individual has served to the Annual Report Date selected |
+| Director Experience | Director Experience - Total Number of Private Boards to Date |  | The total number of Private Boards that an individual has served to the Annual Report Date selected |
+| Director Experience | Director Experience - Total Number of Other Boards to Date |  | The total number of Other Boards that an individual has served to the Annual Report Date selected. |
+| Director Experience | Director Experience - Total Number of Quoted Current Boards |  | The number of Quoted Boards that an individual serves on at the current Annual Report Date |
+| Director Experience | Director Experience - Total Number of Private Current Boards |  | The number of Private Boards that an individual serves on at the current Annual Report Date |
+| Director Experience | Director Experience - Total Number of Other Current Boards |  | The number of Other Boards that an individual serves on at the current Annual Report Date |
+| Director Experience | Director Experience - Avg. Yrs on Other Quoted Boards |  | The Average Time that a Director sits on the Board of Quoted Companies |
+| Director Experience | Director Experience - Age (Yrs) |  | Individual’s current age at the Annual Report Date selected |
+| Director Experience | Director Experience - Number of Qualifications |  | Total number of Educational qualifications (undergraduate and above) for the individual at a selected Annual Report Date |
 | Compensation Ratios | Ratios - Bonus/ (Bonus&Salary) |  | Ratio of bonus earned to bonus plus salary earned at a selected Annual Report Date |
 | Compensation Ratios | Ratios - Equity Linked/ Total |  | Ratio of equity linked compensation earned to total compensation earned at a selected Annual Report Date |
 | Compensation Ratios | Ratios - Performance/ Total |  | Ratio of performance based compensation earned to total compensation earned at a selected Annual Report Date |
 | Compensation Ratios | Ratios - Wealth Delta |  | Change in the individual’s wealth in the company for each 1% change in the stock price |
-| Director Count Totals | Director Count Totals - Number of Independent NED with past CFO/FD role |  |  |
-| Compensation | Annual Direct Compensation - Salary |  |  |
-| Compensation | Annual Direct Compensation - Bonus |  |  |
-| Compensation | Annual Direct Compensation - D.C Pension |  |  |
-| Compensation | Annual Direct Compensation - Other |  |  |
-| Compensation | Annual Direct Compensation - Total Salary+Bonus |  |  |
-| Compensation | Annual Direct Compensation - Total Inc. D.C. Pension & Other |  |  |
-| Compensation | Annual- Equity Linked Options - Shares |  |  |
-| Compensation | Annual- Equity Linked Options - LTIPS(max) |  |  |
-| Compensation | Annual- Equity Linked Options - Intrinsic Options (excercisable) |  |  |
-| Compensation | Annual- Equity Linked Options - Intrinsic Options (unexercisable) |  |  |
-| Compensation | Annual- Equity Linked Options - Estimated Options (unexcercisable) |  |  |
-| Compensation | Annual- Equity Linked Options - Estimated Options (exercisable) |  |  |
-| Compensation | Annual- Equity Linked Options - Share Price |  |  |
+| Director Count Totals | Director Count Totals - Number of Independent NED with past CFO/FD role |  | Number of independent Non-Executive Directors with past Chief Financial Officer or Financial Director experience at the Annual Report Date selected. |
+| Compensation | Annual Direct Compensation - Salary |  | Base annual pay at the Annual Report Date selected |
+| Compensation | Annual Direct Compensation - Bonus |  | An annual payment made in addition to salary at the Annual Report Date selected |
+| Compensation | Annual Direct Compensation - D.C Pension |  | Employer’s contribution towards the individual’s direct compensation pension or retirement plan at the Annual Report Date selected |
+| Compensation | Annual Direct Compensation - Other |  | Other annual ad hoc cash payments such as relocation costs and fringe benefits at the Annual Report Date selected |
+| Compensation | Annual Direct Compensation - Total Salary+Bonus |  | Total salary plus bonus compensation at the Annual Report Date selected |
+| Compensation | Annual Direct Compensation - Total Inc. D.C. Pension & Other |  | Total direct compensation at the Annual Report Date selected |
+| Compensation | Annual- Equity Linked Options - Shares |  | Value of shares held at the end of the report for the individual. These are valued at the closing stock price of the Annual Report Date selected. |
+| Compensation | Annual- Equity Linked Options - LTIPS(max) |  | Maximum potential value of shares held at the end of the report for the individual when exercised. |
+| Compensation | Annual- Equity Linked Options - Intrinsic Options (excercisable) |  | The valuation of Exercisable Options awarded in the period. These are valued at the closing stock price of the Annual Report Date selected. This shows by how much options awarded are in the money. This is equal to the gap between the Exercise Price of the Options and the stock price multiplied by the number of options. |
+| Compensation | Annual- Equity Linked Options - Intrinsic Options (unexercisable) |  | The valuation of Un-exercisable Options awarded in the period. These are valued at the closing stock price of the Annual Report Date selected. This shows by how much options awarded are in the money. This is equal to the gap between the Exercise Price of the Options and the stock price multiplied by the number of options. |
+| Compensation | Annual- Equity Linked Options - Estimated Options (exercisable) |  | A valuation of Exercisable Options awarded in the period. These are valued at the closing stock price of the Annual Report Date selected. Valuation uses a Generalized Black - Scholes option pricing model using the following variables: - Volatility is measured using 100 days of historic stock prices - Risk free rate is measured using the following: o UK = 6 months Libor rate, Europe = EURIBOR, US = 10 year T-Bill, otherwise = 6.5% It is assumed that exercise is on expiry date whether known or assumed. |
+| Compensation | Annual- Equity Linked Options - Estimated Options (unexcercisable) |  | A valuation of Un-exercisable Options awarded in the period. These are valued at the closing stock price of the Annual Report Date selected. Valuation uses a Generalized Black - Scholes option pricing model using the following variables: - Volatility is measured using 100 days of historic stock prices - Risk free rate is measured using the following: o UK = 6 months Libor rate, Europe = EURIBOR, US = 10 year T-Bill, otherwise = 6.5% It is assumed that exercise is on expiry date whether known or assumed. |
+| Compensation | Annual- Equity Linked Options - Share Price |  | The closing stock price as of the Annual Report Date selected |
 | Compensation | Annual- Equity Linked Options - Total Equity Linked Compensation |  |  |
-| Compensation | Total - Total Annual Compensation |  |  |
-| Compensation | Accumulated Wealth - Shares |  |  |
-| Compensation | Accumulated Wealth - LTIPS(max) |  |  |
-| Compensation | Accumulated Wealth - Intrinsic Option |  |  |
-| Compensation | Accumulated Wealth - Estimated Option |  |  |
-| Compensation | Accumulated Wealth - Liquid Wealth |  |  |
-| Compensation | Total Wealth - Total Wealth |  |  |
+| Compensation | Total - Total Annual Compensation |  | Total direct compensation plus total equity linked compensation for the period |
+| Compensation | Accumulated Wealth - Shares |  | Value of shares held at the end of the report for the individual. These are valued at the closing stock price of the Annual Report Date selected. |
+| Compensation | Accumulated Wealth - LTIPS(max) |  | Maximum potential value of shares held at the end of the report for the individual when exercised. |
+| Compensation | Accumulated Wealth - Intrinsic Option |  | A valuation of Options held at the end of the period for the individual. These are valued at the closing stock price of the Annual Report Date selected. This shows by how much options awarded are in the money. This is equal to the gap between the Exercise Price of the Options and the stock price multiplied by the number of options. |
+| Compensation | Accumulated Wealth - Estimated Option |  | A valuation of Options held at the end of the period for the individual. These are valued at the closing stock price of the Annual Report Date selected. Valuation uses a Generalized Black - Scholes option pricing model using the following variables: - Volatility is measured using 100 days of historic stock prices - Risk free rate is measured using the following: o UK = 6 months Libor rate, Europe = EURIBOR, US = 10 year T-Bill, otherwise = 6.5% It is assumed that exercise is on expiry date whether known or assumed. |
+| Compensation | Accumulated Wealth - Liquid Wealth |  | A valuation of Liquid Wealth at the end of the period for the individual. These are valued at the closing stock price of the Annual Report Date selected |
+| Compensation | Total Wealth - Total Wealth |  | A valuation of Total Wealth at the end of the period for the individual. These are valued at the closing stock price of the Annual Report Date selected |
 | Education | Bachelors |  | This is originally an indicator variable that returns 1 if the director has at least one Bachelors degree, and 0 otherwise. So the mean is the % of directors in a (company, year) that has at least one Bachelors degree. |
 | Education | Masters |  |  |
 | Education | MBA |  |  |
 | Education | PhD |  |  |
 | Director Experience - Gender | Male  |  |  |
-| Director Experience - Nationality Mix | American |  |  |
+| Director Experience - Nationality Mix | American |  |  % of directors in a (company, year) who are of American nationality |
 | Director Experience - Nationality Mix | Canadian |  |  |
 | Director Experience - Nationality Mix | British |  |  |
 | Director Experience - Nationality Mix | European |  | Excludes British, includes Swiss |
@@ -106,6 +106,7 @@ Process Boardex files to get a relevant firm-level dataset.
 | Firm identifiers | Ticker |  |  |
 | Firm identifiers | Market Cap |  |  |
 | Firm identifiers | HOCountryName |
+
 
 
 ## Misc
@@ -137,7 +138,8 @@ Singapore, South Korea, Sri Lanka, Syria, Taiwan, Tajikistan, Thailand, Turkmeni
 'South Korean', 'Sri Lankan', 'Syrian', 'Thai'
 
 ### BoardEx variables documentation
-- [BoardEx WRDS Data Dictionary](https://wrds-www.wharton.upenn.edu/documents/798/BoardEx_WRDS_Data_Dictionary_102020.pdf) (login required)
+- Explanation of variables taken from `BoardEx Core Reports Data Dictionary 102020 (002).pdf`, which seems to be no longer available on WRDS.
+- Current version on WRDS: [BoardEx WRDS Data Dictionary](https://wrds-www.wharton.upenn.edu/documents/798/BoardEx_WRDS_Data_Dictionary_102020.pdf) (login required)
 
 ### Saving this .md file as a .docx
 - [Link to converter](https://cloudconvert.com/md-to-docx)
