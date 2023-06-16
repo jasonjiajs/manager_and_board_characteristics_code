@@ -23,6 +23,7 @@ Process Boardex files to get a relevant firm-level dataset.
 - Firm identifiers: variables that provide details on the company. They are added on by merging on Company ID.
 
 ### Full list of variables
+- This table was first created in Excel at `/boardex_firm_level_dataset_list_of_variables.xlsx`, then converted to a Markdown table using an [Excel to Markdown converter](https://tableconvert.com/).
 
 | Category | Original Variable Name | Stata Variable Name | Explanation |
 |---|---|---|---|
@@ -123,6 +124,9 @@ Process Boardex files to get a relevant firm-level dataset.
 
 ## Misc
 
+### Institution ID to Institution Name Crosswalk
+- Refer to `institution_name_crosswalk.csv` (only in local folder for now).
+
 ### Additional description for select variables not kept in firm-level dataset
 - Compensation Ratios Variables: 
   - 'Ratios - %Change from Last Period': Percentage change of performance to total ratio over the same ratio from the previous annual report year  
@@ -148,9 +152,6 @@ Singapore, South Korea, Sri Lanka, Syria, Taiwan, Tajikistan, Thailand, Turkmeni
 'Indian', 'Indonesian', 'Iranian', 'Iraqi', 'Israeli', 'Japanese', 'Jordanian', 'Kazakhstani',
 'Kuwaiti', 'Malaysian', 'Omani', 'Pakistani', 'Qatari', 'Saudi', 'Singaporean',
 'South Korean', 'Sri Lankan', 'Syrian', 'Thai'
-
-### Institution ID to Institution Name Crosswalk
-- 
 
 ### BoardEx variables documentation
 - Explanation of variables taken from `BoardEx Core Reports Data Dictionary 102020 (002).pdf`, which seems to be no longer available on WRDS.
