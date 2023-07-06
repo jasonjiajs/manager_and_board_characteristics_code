@@ -1,11 +1,14 @@
 # manager_and_board_characteristics_code
+
 Process Boardex files to get a relevant firm-level dataset.
 
 ## Manager-level dataset overview
+
 - Level of aggregation: (Year x Company ID)
 - We start with a (Year x Company ID x Director) - level dataset, then we aggregate across directors to get a (Year x Company ID) - level dataset.
 
 ### Categories of variables
+
 - Initial identifiers: variables that identify the observation, specifically year and company.
 - Quantitative variables in the following categories are aggregated by taking the **mean** across directors for each (Year x Company ID) pair. NaN values occur when every director in that (Year x Company ID) pair has a NaN value.
   - Characteristics of Roles
@@ -23,6 +26,7 @@ Process Boardex files to get a relevant firm-level dataset.
 - Firm identifiers: variables that provide details on the company. They are added on by merging on Company ID.
 
 ### Full list of variables
+
 - This table was first created in Excel at `/boardex_firm_level_dataset_list_of_variables.xlsx`, then converted to a Markdown table using an [Excel to Markdown converter](https://tableconvert.com/).
 
 | Category | Original Variable Name | Stata Variable Name | Explanation |
@@ -113,29 +117,32 @@ Process Boardex files to get a relevant firm-level dataset.
 | Firm identifiers | Market Cap | market_cap | The total value of a company's securities at Current prices as quoted on a stock exchange. Market capitalization is calculated by multiplying the total number of shares by the market price. |
 | Firm identifiers | HOCountryName | ho_country_name | The full country name the Head Office of the Company is located in. |
 
-
 ## Folder structure
+
 - This repo contains the code and documentation for the Manager and Board Characteristics project. It is saved under the folder `code`. The other folders are `data` and `output`. The full version of both folders is available in Mercury, and a subset is available in Dropbox.
 - To save this repo in your local drive under `manager_and_board_characteristics/code`: first cd to the root folder `manager_and_board_characteristics`, then clone the repo using `git clone https://github.com/jasonjiajs/manager_and_board_characteristics_code.git code`.
 - `manager_and_board_characteristics`
   - `code`
   - `data`
-  - `output` 
+  - `output`
 
 ## Misc
 
 ### Institution ID to Institution Name Crosswalk
+
 - Refer to `institution_name_crosswalk.csv` (only in local folder for now).
 
 ### Additional description for select variables not kept in firm-level dataset
-- Compensation Ratios Variables: 
+
+- Compensation Ratios Variables:
   - 'Ratios - %Change from Last Period': Percentage change of performance to total ratio over the same ratio from the previous annual report year  
 
 ### Nationalities
-- Countries in Europe: Albania, Andorra, Austria, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, 
-Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Republic of Ireland, 
-Italy, Kosovo, Latvia, Liechtenstein, Lithuania, Luxembourg, North Macedonia, Malta, Moldova, Monaco, 
-Montenegro, Netherlands, Norway, Poland, Portugal, Romania, Russia, San Marino, Serbia, Slovakia, 
+
+- Countries in Europe: Albania, Andorra, Austria, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus,
+Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Republic of Ireland,
+Italy, Kosovo, Latvia, Liechtenstein, Lithuania, Luxembourg, North Macedonia, Malta, Moldova, Monaco,
+Montenegro, Netherlands, Norway, Poland, Portugal, Romania, Russia, San Marino, Serbia, Slovakia,
 Slovenia, Spain, Sweden, Switzerland, Turkey, Ukraine, Vatican City
 
 - Countries in Asia: Afghanistan, Armenia, Azerbaijan, Bahrain, Bangladesh, Bhutan, Brunei, Cambodia, China, East Timor, Georgia, India, Indonesia, Iran,
@@ -143,19 +150,21 @@ Iraq, Israel, Japan, Jordan, Kazakhstan, Kuwait, Kyrgyzstan, Laos, Lebanon, Mala
 Myanmar (Burma), Nepal, North Korea, Oman, Pakistan, Palestine, The Philippines, Qatar, Saudi Arabia,
 Singapore, South Korea, Sri Lanka, Syria, Taiwan, Tajikistan, Thailand, Turkmenistan, United Arab Emirates, Uzbekistan, Vietnam, Yemen
 
-- European nationalities in dataset: 'Austrian', 'Belarusian', 'Belgian', 'Bosnian', 'Bulgarian', 'Croatian', 'Cypriot', 'Czech', 'Danish', 
-'Dutch',  'Finnish', 'French', 'German', 'Greek', 'Hungarian', 'Icelander', 'Irish', 'Italian', 
-'Luxembourger', 'Maltese', 'Monacan', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 
+- European nationalities in dataset: 'Austrian', 'Belarusian', 'Belgian', 'Bosnian', 'Bulgarian', 'Croatian', 'Cypriot', 'Czech', 'Danish',
+'Dutch',  'Finnish', 'French', 'German', 'Greek', 'Hungarian', 'Icelander', 'Irish', 'Italian',
+'Luxembourger', 'Maltese', 'Monacan', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian',
 'Slovak', 'Slovene', 'Spanish', 'Swedish', 'Swiss', 'Turkish', 'Ukrainian'
 
-- Asian nationalities in dataset: 'Armenian', 'Bahraini', 'Burmese', 'Chinese', 'Chinese (Taiwan)', 'Emirian', 'Filipino', 'Georgian', 
+- Asian nationalities in dataset: 'Armenian', 'Bahraini', 'Burmese', 'Chinese', 'Chinese (Taiwan)', 'Emirian', 'Filipino', 'Georgian',
 'Indian', 'Indonesian', 'Iranian', 'Iraqi', 'Israeli', 'Japanese', 'Jordanian', 'Kazakhstani',
 'Kuwaiti', 'Malaysian', 'Omani', 'Pakistani', 'Qatari', 'Saudi', 'Singaporean',
 'South Korean', 'Sri Lankan', 'Syrian', 'Thai'
 
 ### BoardEx variables documentation
+
 - Explanation of variables taken from `BoardEx Core Reports Data Dictionary 102020 (002).pdf`, which seems to be no longer available on WRDS.
 - Current version on WRDS: [BoardEx WRDS Data Dictionary](https://wrds-www.wharton.upenn.edu/documents/798/BoardEx_WRDS_Data_Dictionary_102020.pdf) (login required)
 
 ### Saving this .md file as a .docx
-- [Link to converter](https://cloudconvert.com/md-to-docx) 
+
+- [Link to converter](https://cloudconvert.com/md-to-docx)
