@@ -2,6 +2,12 @@
 
 Process Boardex files to get a relevant firm-level dataset.
 
+## Key stages
+
+1. Convert ISINs and gvkeys provided by Kilian to a list of BoardEx company IDs.
+2. Filter BoardEx by rows (company IDs) and columns (select variables).
+3. Aggregate the filtered BoardEx data to create a firm-level dataset with manager and board characteristics.
+
 ## Manager-level dataset overview
 
 - Level of aggregation: (Year x Company ID)
